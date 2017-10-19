@@ -1,0 +1,24 @@
+{
+  "name": "mogo",
+  "version": "1.0.0",
+  "description": "Portfolio template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alia-adel/MOGO-Portfolio.git"
+  },
+  "keywords": [
+    "Frontend",
+    "WebDevelopment",
+    "Portfolio"
+  ],
+  "author": "Alexandr Karsakov and Alia Adel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alia-adel/MOGO-Portfolio/issues"
+  },
+  "homepage": "https://github.com/alia-adel/MOGO-Portfolio#readme"
+}
