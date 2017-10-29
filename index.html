@@ -18,7 +18,7 @@
     <!-- First row that includes header & carousel -->
     <!-- Background will be an image from unsplash -->
     <div class="top-row">
-        <div class="wrapper">
+        <div class="container wrapper">
             <header class="header-row">
                 <span class="logo">MoGo</span>
                 <nav>
@@ -61,56 +61,60 @@
 
     <!-- Stories row -->
     <div class="story-row">
-        <div class="section-header">
-            <h3 class="head1">What we do</h3>
-            <h1 class="head2">Story about us</h1>
-            <hr class="seperator">
-            <p class="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra risus quis nulla dignissim, eget rhoncus nibh accumsan.
-                Nam et orci a orci sollicitudin tempor non sed est. Maecenas eu cursus quam.
-            </p>
+        <div class="container wrapper">
+            <div class="section-header">
+                <h3 class="head1">What we do</h3>
+                <h1 class="head2">Story about us</h1>
+                <hr class="seperator">
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra risus quis nulla dignissim, eget rhoncus nibh accumsan.
+                    Nam et orci a orci sollicitudin tempor non sed est. Maecenas eu cursus quam.
+                </p>
+            </div>
+            <div class="stories">
+                <div class="story-card">
+                    <figure>
+                        <!-- \\TODO: add srcset & handle responsivness & use grunt -->
+                        <img src="" alt="Story 1">
+                    </figure>
+                    <!-- \\TODO: the following div to take fill container width & height
+                            & to have higher Z-index -->
+                    <div class="story-caption">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <!-- \\TODO: the following text to b captilized -->
+                        <span>Super Team</span>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <figure>
+                        <!-- \\TODO: add srcset & handle responsivness & use grunt -->
+                        <img src="" alt="Story 1">
+                    </figure>
+                    <!-- \\TODO: the following div to take fill container width & height
+                                & to have higher Z-index -->
+                    <div class="story-caption">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <!-- \\TODO: the following text to b captilized -->
+                        <span>Super Team</span>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <figure>
+                        <!-- \\TODO: add srcset & handle responsivness & use grunt -->
+                        <img src="" alt="Story 1">
+                    </figure>
+                    <!-- \\TODO: the following div to take fill container width & height
+                                    & to have higher Z-index -->
+                    <div class="story-caption">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <!-- \\TODO: the following text to b captilized -->
+                        <span>Super Team</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="stories">
-            <div class="story-card">
-                <figure>
-                    <!-- \\TODO: add srcset & handle responsivness & use grunt -->
-                    <img src="" alt="Story 1">
-                </figure>
-                <!-- \\TODO: the following div to take fill container width & height
-                & to have higher Z-index -->
-                <div class="story-caption">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                    <!-- \\TODO: the following text to b captilized -->
-                    <span>Super Team</span>
-                </div>
-            </div>
-            <div class="story-card">
-                <figure>
-                    <!-- \\TODO: add srcset & handle responsivness & use grunt -->
-                    <img src="" alt="Story 1">
-                </figure>
-                <!-- \\TODO: the following div to take fill container width & height
-                    & to have higher Z-index -->
-                <div class="story-caption">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                    <!-- \\TODO: the following text to b captilized -->
-                    <span>Super Team</span>
-                </div>
-            </div>
-            <div class="story-card">
-                <figure>
-                    <!-- \\TODO: add srcset & handle responsivness & use grunt -->
-                    <img src="" alt="Story 1">
-                </figure>
-                <!-- \\TODO: the following div to take fill container width & height
-                        & to have higher Z-index -->
-                <div class="story-caption">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                    <!-- \\TODO: the following text to b captilized -->
-                    <span>Super Team</span>
-                </div>
-            </div>
-        </div>
+
+
     </div>
     <!-- end of Stories row -->
     <!-- Statistics row -->
