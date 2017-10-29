@@ -28,11 +28,6 @@ a {
     color: #333333;
     text-decoration: none; }
 
-/* Wrapper class for all columns */
-.wrapper {
-  padding: 0 10vw; }
-
-/* end of Wrapper class for all columns */
 /* Section Header styles */
 .section-header {
   padding: 4em 2em;
@@ -63,11 +58,20 @@ a {
 .top-row {
   width: 100vw;
   height: 1000px;
-  background-image: url(../../images/bg.jpg); }
+  background-image: url(../../images/bg.jpg);
+  background: -webkit-linear-gradient(bottom, #f38181, #fce38a);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, #f38181, #fce38a);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, #f38181, #fce38a);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #f38181, #fce38a);
+  /* Standard syntax (must be last) */ }
   .top-row .header-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    overflow-wrap: break-word;
     padding: 1em; }
     .top-row .header-row .logo {
       font-size: 30px;
@@ -76,11 +80,13 @@ a {
     .top-row .header-row nav .nav {
       display: flex;
       flex-direction: row;
-      justify-content: space-between; }
+      justify-content: space-between;
+      overflow-wrap: break-word; }
       .top-row .header-row nav .nav .nav-item {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        overflow-wrap: break-word;
         align-items: center;
         padding: 0;
         margin: 0 0.5em; }
@@ -103,6 +109,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-wrap: break-word;
     align-items: center; }
     .top-row .section-header * {
       color: #ffffff; }
@@ -114,3 +121,78 @@ a {
       background-color: inherit; }
 
 /* end of application header styles */
+/* General card styles */
+.card {
+  width: 380px;
+  height: 250px;
+  margin: 0.5em; }
+  .card .overlay-card {
+    display: none; }
+    .card .overlay-card .card-img {
+      width: 380px;
+      height: 250px; }
+  .card:hover {
+    position: relative;
+    bottom: 7px; }
+    .card:hover .overlay-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow-wrap: break-word;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      position: relative;
+      top: -100%;
+      bottom: -100%;
+      z-index: 10;
+      background: -webkit-linear-gradient(bottom, #f38181, #fce38a);
+      /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(bottom, #f38181, #fce38a);
+      /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(bottom, #f38181, #fce38a);
+      /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to bottom, #f38181, #fce38a);
+      /* Standard syntax (must be last) */
+      opacity: 0.9;
+      -webkit-box-shadow: 7px 7px 0px 0px #46cbb2;
+      -moz-box-shadow: 7px 7px 0px 0px #46cbb2;
+      box-shadow: 7px 7px 0px 0px #46cbb2;
+      cursor: pointer; }
+      .card:hover .overlay-card .card-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow-wrap: break-word;
+        align-items: center;
+        color: #ffffff;
+        z-index: 10;
+        opacity: 1; }
+        .card:hover .overlay-card .card-text* {
+          font-size: 18px;
+          font-weight: 700;
+          color: #ffffff;
+          margin: 0.5em; }
+
+/* General card styles */
+.stories .story-card {
+  width: 380px;
+  height: 250px; }
+  .stories .story-card:hover .overlay-card .card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-wrap: break-word;
+    align-items: center;
+    color: #ffffff;
+    z-index: 10;
+    opacity: 1; }
+    .stories .story-card:hover .overlay-card .card-text span {
+      text-transform: uppercase;
+      font-weight: 700; }
+
+.stories {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-wrap: break-word; }
