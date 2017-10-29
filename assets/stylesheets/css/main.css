@@ -125,19 +125,19 @@ a {
 
 /* end of application header styles */
 /* General card styles */
-.card {
+.imaged-card {
   width: 380px;
   height: 250px;
   margin: 0.5em; }
-  .card .overlay-card {
+  .imaged-card .overlay-card {
     display: none; }
-    .card .overlay-card .card-img {
+    .imaged-card .overlay-card .card-img {
       width: 380px;
       height: 250px; }
-  .card:hover {
+  .imaged-card:hover {
     position: relative;
     bottom: 7px; }
-    .card:hover .overlay-card {
+    .imaged-card:hover .overlay-card {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -162,7 +162,7 @@ a {
       -moz-box-shadow: 7px 7px 0px 0px #46cbb2;
       box-shadow: 7px 7px 0px 0px #46cbb2;
       cursor: pointer; }
-      .card:hover .overlay-card .card-text {
+      .imaged-card:hover .overlay-card .card-text {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -171,7 +171,7 @@ a {
         color: #ffffff;
         z-index: 10;
         opacity: 1; }
-        .card:hover .overlay-card .card-text* {
+        .imaged-card:hover .overlay-card .card-text* {
           font-size: 18px;
           font-weight: 700;
           color: #ffffff;
@@ -196,6 +196,40 @@ a {
       font-weight: 700; }
 
 /* end of Cards specific to the stories */
+/* general article card */
+.article-card {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 30px 335px;
+  margin: 2em; }
+  .article-card .card-icon {
+    color: #95e1d3;
+    grid-column: 1;
+    grid-row: 1 / 2; }
+  .article-card .card-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0;
+    grid-column: 2 / 2;
+    grid-row: 1; }
+  .article-card .card-txt {
+    font-family: "Roboto", sans-serif;
+    color: #999999;
+    text-align: left;
+    grid-column: 2 / 2;
+    grid-row: 2; }
+
+/* end of general article card */
+/* Specific article cards for Services */
+.services-items {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 33% 33% 33%;
+  align-items: center; }
+
+/* end of Specific article cards for Services */
 /* Staistics item styles */
 .stats-item {
   display: flex;
