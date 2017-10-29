@@ -32,3 +32,22 @@
   }
 }
 
+
+/// Align elements horizontally (row) using Flex box
+/// @author Alia Adel
+/// @param {String} $justify-elem
+@mixin align-horizontally ($justify-elem) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify-elem;
+}
+
+/// Align elements vertically (column) using Flex box
+/// @author Alia Adel
+/// @param {String} $justify-elem
+@mixin align-vertically ($justify-elem) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-elem;
+}
+

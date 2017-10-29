@@ -9,7 +9,8 @@
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="./vendor/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="./assets/stylesheets/css/main.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700,700i|Roboto:300,300i,400,400i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto:300,400&amp;subset=latin-ext"
+        rel="stylesheet">
 
 </head>
 
@@ -17,25 +18,57 @@
     <!-- First row that includes header & carousel -->
     <!-- Background will be an image from unsplash -->
     <div class="top-row">
-        <div class="header-row">
-            <header>
-                <figure class="app-logo">
-                    <!-- \\TODO: add srcset & handle responsivness & use grunt -->
-                    <img src="" alt="MOGO logo">
-                </figure>
+        <div class="wrapper">
+            <header class="header-row">
+                <span class="logo">MoGo</span>
                 <nav>
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <a href="#" class="nav-item">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="nav-item">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
 
+                    </ul>
                 </nav>
             </header>
-        </div>
-        <div class="carousel-row">
+            <div class="section-header">
+                <h3 class="head1">Creative Template</h3>
+                <h1 class="head2">Welcome To MOGO</h1>
+                <hr class="seperator">
+            </div>
+            <div class="carousel-row">
+            </div>
         </div>
     </div>
     <!-- end of First row that includes header & carousel -->
 
     <!-- Stories row -->
     <div class="story-row">
-        <div class="story-intro">
+        <div class="section-header">
+            <h3 class="head1">What we do</h3>
+            <h1 class="head2">Story about us</h1>
+            <hr class="seperator">
+            <p class="paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra risus quis nulla dignissim, eget rhoncus nibh accumsan.
+                Nam et orci a orci sollicitudin tempor non sed est. Maecenas eu cursus quam.
+            </p>
         </div>
         <div class="stories">
             <div class="story-card">
@@ -106,7 +139,10 @@
     <!-- end of Statistics row -->
     <!-- Services row -->
     <div class="services-row">
-        <div class="services-header">
+        <div class="section-header">
+            <h3 class="head1">We work with</h3>
+            <h1 class="head2">Amazing Services</h1>
+            <hr class="seperator">
         </div>
         <div class="services-items">
             <article class="service-item">
