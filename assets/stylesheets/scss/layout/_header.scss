@@ -4,8 +4,7 @@
 
 /* Application header styles */
 .top-row {
-    width: 100vw;
-    height: 1000px;
+    width: 100%;
     //TODO move the below to mixin    
     background: -webkit-linear-gradient(bottom, #f38181, #fce38a); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(bottom, #f38181, #fce38a); /* For Opera 11.1 to 12.0 */

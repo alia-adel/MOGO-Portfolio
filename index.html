@@ -7,7 +7,7 @@
     <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
     <!-- stylesheets -->
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./vendor/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">    
+    <link href="./vendor/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="./assets/stylesheets/css/main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto:300,400&amp;subset=latin-ext"
         rel="stylesheet">
@@ -46,12 +46,69 @@
                     </ul>
                 </nav>
             </header>
-            <div class="section-header">
-                <h3 class="head1">Creative Template</h3>
-                <h1 class="head2">Welcome To MOGO</h1>
-                <hr class="seperator">
-            </div>
-            <div class="carousel-row">
+            <div id="myCarousel" class="carousel slide carousel-row" data-ride="carousel">
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="carousel-caption">
+                            <div class="section-header">
+                                <h3 class="head1">Creative Template</h3>
+                                <h1 class="head2">Welcome To MOGO</h1>
+                                <hr class="seperator">
+                                <a href="#" role="button">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h3>Chicago</h3>
+                            <p>Thank you, Chicago!</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h3>New York</h3>
+                            <p>We love the Big Apple!</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h3>New York</h3>
+                            <p>We love the Big Apple!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active">
+                        <div class="ind-caption">
+                            <span>01</span>
+                            <p>Intro</p>
+                        </div>
+                    </li>
+                    <li data-target="#myCarousel" data-slide-to="1">
+                        <div class="ind-caption">
+                            <span>02</span>
+                            <p>Work</p>
+                        </div>
+                    </li>
+                    <li data-target="#myCarousel" data-slide-to="2">
+                        <div class="ind-caption">
+                            <span>03</span>
+                            <p>About</p>
+                        </div>
+                    </li>
+                    <li data-target="#myCarousel" data-slide-to="3">
+                        <div class="ind-caption">
+                            <span>04</span>
+                            <p>Contacts</p>
+                        </div>
+                    </li>
+                </ol>
             </div>
         </div>
     </div>

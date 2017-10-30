@@ -34,7 +34,7 @@ a {
 
 /* Section Header styles */
 .section-header {
-  padding: 2em;
+  padding: 20px;
   margin: 0; }
   .section-header .head1 {
     font-family: "Kaushan Script", cursive;
@@ -60,8 +60,7 @@ a {
 
 /* Application header styles */
 .top-row {
-  width: 100vw;
-  height: 1000px;
+  width: 100%;
   background: -webkit-linear-gradient(bottom, #f38181, #fce38a);
   /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom, #f38181, #fce38a);
@@ -124,6 +123,81 @@ a {
       background-color: inherit; }
 
 /* end of application header styles */
+/* Header Carousel styles */
+#myCarousel .carousel-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-wrap: break-word;
+  align-items: center;
+  width: 100%;
+  margin: 2em; }
+  #myCarousel .carousel-inner .item .carousel-caption {
+    font-family: "Montserrat", sans-serif;
+    font-size: 70px;
+    position: relative;
+    color: #ffffff;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    #myCarousel .carousel-inner .item .carousel-caption a[role=button] {
+      width: 160px;
+      height: 40px;
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: none;
+      border: 3px solid #ffffff;
+      padding: 0.5em 0; }
+
+#myCarousel .carousel-indicators {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-wrap: break-word;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  left: 0;
+  margin: 0 0 2em; }
+  #myCarousel .carousel-indicators li {
+    width: 280px;
+    height: 3px;
+    border-radius: 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-indent: 0;
+    margin: 1.5em; }
+    #myCarousel .carousel-indicators li.active {
+      background-color: #f38181; }
+      #myCarousel .carousel-indicators li.active .ind-caption * {
+        color: #ffffff; }
+    #myCarousel .carousel-indicators li .ind-caption {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      overflow-wrap: break-word; }
+      #myCarousel .carousel-indicators li .ind-caption * {
+        color: rgba(255, 255, 255, 0.5);
+        font-family: "Montserrat", sans-serif;
+        text-align: left;
+        padding: 0;
+        margin: 0; }
+      #myCarousel .carousel-indicators li .ind-caption span {
+        font-size: 24px;
+        font-weight: 700; }
+      #myCarousel .carousel-indicators li .ind-caption p {
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 0.2em 0.5em; }
+
+/* end of Header Carousel styles */
 /* General card styles */
 .imaged-card {
   width: 380px;
