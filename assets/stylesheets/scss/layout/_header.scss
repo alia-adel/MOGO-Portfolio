@@ -13,6 +13,7 @@
     .header-row {        
         @include align-horizontally (space-between);    
         padding: 1em;
+        
         .logo {
             font-size: 30px;
             font-weight: 700;

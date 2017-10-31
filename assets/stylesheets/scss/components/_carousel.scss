@@ -8,6 +8,7 @@
         @include align-vertically(space-between);
         align-items: center;
         width: 100%;
+        min-height: 600px;
         margin: 2em;
         .item {
             .carousel-caption {
@@ -15,11 +16,7 @@
                 font-size: 70px;
                 position: relative;
                 color: $white-color;   
-                margin: 0;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;     
+                @extend .clearElement;    
                 a[role=button] {
                     width: 160px;
                     height: 40px;

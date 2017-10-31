@@ -1,6 +1,15 @@
 /* Application primary text color */
 /* Application secondary tetx color */
 /* Application background color */
+/* Clears elements margin, padding & positioning*/
+.clearElement, #myCarousel .carousel-inner .item .carousel-caption {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
 /**
  * Set up a decent box model on the root element
  */
@@ -131,17 +140,13 @@ a {
   overflow-wrap: break-word;
   align-items: center;
   width: 100%;
+  min-height: 600px;
   margin: 2em; }
   #myCarousel .carousel-inner .item .carousel-caption {
     font-family: "Montserrat", sans-serif;
     font-size: 70px;
     position: relative;
-    color: #ffffff;
-    margin: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
+    color: #ffffff; }
     #myCarousel .carousel-inner .item .carousel-caption a[role=button] {
       width: 160px;
       height: 40px;
