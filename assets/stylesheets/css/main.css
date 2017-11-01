@@ -277,36 +277,28 @@ a {
 /* end of Cards specific to the stories */
 /* general article card */
 .article-card {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 30px 335px;
-  margin: 2em; }
+  padding: 5px; }
   .article-card .card-icon {
-    color: #95e1d3;
-    grid-column: 1;
-    grid-row: 1 / 2; }
+    color: #95e1d3; }
   .article-card .card-title {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     text-align: left;
-    margin: 0;
-    grid-column: 2 / 2;
-    grid-row: 1; }
+    padding-bottom: 5px; }
   .article-card .card-txt {
     font-family: "Roboto", sans-serif;
     color: #999999;
-    text-align: left;
-    grid-column: 2 / 2;
-    grid-row: 2; }
+    text-align: left; }
 
 /* end of general article card */
 /* Specific article cards for Services */
-.services-items {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 33% 33% 33%;
-  align-items: center; }
+.services-items .services-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-wrap: break-word;
+  align-items: flex-end; }
 
 /* end of Specific article cards for Services */
 /* Staistics item styles */

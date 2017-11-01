@@ -85,15 +85,10 @@
 
 /* general article card */
 .article-card {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 30px 335px;   
-    margin: 2em;
+    padding: 5px;
 
     .card-icon {
         color: $green-blue-color;
-        grid-column: 1;
-        grid-row: 1 / 2;
     }
 
     .card-title {
@@ -101,26 +96,22 @@
         font-weight: 400;
         text-transform: uppercase;
         text-align: left;
-        margin: 0;
-        grid-column: 2 / 2;
-        grid-row: 1;
+        padding-bottom: 5px;
     }
 
     .card-txt {
         font-family: $text-secondary-font-stack;
         color: $light-grey-color;
         text-align: left;
-        grid-column: 2 / 2;
-        grid-row: 2;
     }
 }
 /* end of general article card */
 
 /* Specific article cards for Services */
 .services-items {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 33% 33% 33%;
-    align-items: center;
+    .services-row {
+        @include align-horizontally (space-between);
+        align-items: flex-end;
+    }
 } 
 /* end of Specific article cards for Services */
