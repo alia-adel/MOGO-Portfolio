@@ -4,14 +4,14 @@
 
 /* General card styles */
 .imaged-card {
-    width: 380px; // This is initial width, to be overriden with each new card type if needed
-    height: 250px; // This is initial height, to be overriden with each new card type if needed
-    margin: 0.5em;
+    margin: 10px;
     .overlay-card {
         display: none;  
         .card-img {
             width: 380px;
             height: 250px;
+            min-width: 380px;
+            min-height: 250px;
         }
     }
     &:hover {

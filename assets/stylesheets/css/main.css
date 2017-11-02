@@ -217,14 +217,14 @@ hr {
 /* end of Header Carousel styles */
 /* General card styles */
 .imaged-card {
-  width: 380px;
-  height: 250px;
-  margin: 0.5em; }
+  margin: 10px; }
   .imaged-card .overlay-card {
     display: none; }
     .imaged-card .overlay-card .card-img {
       width: 380px;
-      height: 250px; }
+      height: 250px;
+      min-width: 380px;
+      min-height: 250px; }
   .imaged-card:hover {
     position: relative;
     bottom: 7px; }
