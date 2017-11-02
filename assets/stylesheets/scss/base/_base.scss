@@ -22,6 +22,7 @@ html {
   // border: 1px solid red;
 }
 
+
 /**
  * Basic styles for links
  */
@@ -35,9 +36,13 @@ a {
   }
 }
 
+hr {
+  border: none;
+}
+
 .wrapper {
-    margin-top: 4em;
-    margin-bottom: 4em;
+  width: 1210px;
+  margin: 25px auto;
 }
 
 /* Section Header styles */
@@ -70,5 +75,13 @@ a {
   text-align: center;
   padding: 1em;  
 }
+
+/* Statistics row media queries */
+@media only screen and (min-width: 0) and (max-width: 1209px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+/* end of statistics row media queries */
 
 

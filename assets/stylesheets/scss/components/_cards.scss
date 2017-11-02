@@ -40,7 +40,7 @@
             cursor: pointer;
 
             .card-text {
-                @include align-vertically (space-between);
+                @include align-vertically (space-around);
                 align-items: center;
                 color: $white-color;
                 z-index: 10;
@@ -49,7 +49,7 @@
                     font-size: 18px;
                     font-weight: 700;                 
                     color: $white-color;
-                    margin: 0.5em;
+                    margin: auto;
                     
                 } 
             }
@@ -58,34 +58,12 @@
     }
 } /* General card styles */
 
-/* Cards specific to the stories */
-.stories {
-    .story-card {
-        width: 380px; // This is initial width, to be overriden with each new card type if needed
-        height: 250px; // This is initial height, to be overriden with each new card type if needed
-
-        &:hover {
-            .overlay-card {
-                .card-text {
-                    @include align-vertically (space-between);
-                    align-items: center;
-                    color: $white-color;
-                    z-index: 10;
-                    opacity: 1;                    
-                    span {
-                        text-transform: uppercase;
-                        font-weight: 700;
-                    }
-                }
-            }
-        }
-    }
-} /* end of Cards specific to the stories */
-
 
 /* general article card */
 .article-card {
-    padding: 5px;
+    padding: 25px;
+    width: 350px;
+    min-width: 350px;
 
     .card-icon {
         color: $green-blue-color;
@@ -101,17 +79,16 @@
 
     .card-txt {
         font-family: $text-secondary-font-stack;
+        font-weight: 400;
         color: $light-grey-color;
         text-align: left;
     }
 }
 /* end of general article card */
 
-/* Specific article cards for Services */
-.services-items {
-    .services-row {
-        @include align-horizontally (space-between);
-        align-items: flex-end;
-    }
-} 
-/* end of Specific article cards for Services */
+
+/* Cards row media queries */
+@media only screen and (min-width: 0) and (max-width: 1209px) {
+
+}
+/* end of cards row media queries */

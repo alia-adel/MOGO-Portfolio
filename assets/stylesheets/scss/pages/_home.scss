@@ -2,6 +2,68 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
-.stories {
-    @include align-horizontally (space-between);  
+/* Cards specific to the stories */
+.stories {    
+    @include align-horizontally (space-around);  
+    .story-card {
+        width: 380px; // This is initial width, to be overriden with each new card type if needed
+        height: 250px; // This is initial height, to be overriden with each new card type if needed
+
+        &:hover {
+            .overlay-card {
+                .card-text {
+                    @include align-vertically (space-around);
+                    align-items: center;
+                    color: $white-color;
+                    z-index: 10;
+                    opacity: 1;                    
+                    span {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+} /* end of Cards specific to the stories */
+
+/* Specific article cards for Services */
+.services-items {
+    .services-row {
+        @include align-horizontally (space-around);
+        align-items: baseline;
+        border-bottom: 1px solid  #e5e5e5;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+} 
+/* end of Specific article cards for Services */
+
+
+
+/* Home page row media queries */
+@media only screen and (min-width: 0) and (max-width: 1209px) {
+    .top-row {
+        .wrapper {
+            #myCarousel {
+                display: none;
+            }
+        }
+    }
 }
+
+/* Home page row media queries */
+@media only screen and (min-width: 0) and (max-width: 800px) {
+    .top-row {
+        .wrapper {
+            .header-row {
+                #myNavbar {
+                    display: none;
+                }                
+            }
+        }
+    }
+}
+
+/* end of Home page row media queries */

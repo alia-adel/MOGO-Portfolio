@@ -10,6 +10,7 @@
     margin: 0;
     border: 1px solid rgba(255, 255, 255, 0.3); 
     *{
+        font-family: $text-font-stack;
         color: $white-color;
         text-align: center;
     }
@@ -18,12 +19,21 @@
         font-weight: 700;
         text-align: center;
     }
+    .stats-txt {
+        text-transform: uppercase;
+    }
 } /* end of Staistics item styles */
 
 /* Staistics row styles */
 .stats-row {
     background-color: $green-blue-color;
-    div.container {
+    div.wrapper {
         @include align-horizontally (space-between);
     }
 } /* end of Staistics row styles */
+
+/* Statistics row media queries */
+@media only screen and (min-width: 0) and (max-width: 1209px) {
+
+}
+/* end of statistics row media queries */

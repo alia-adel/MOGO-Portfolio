@@ -9,13 +9,14 @@
         align-items: center;
         width: 100%;
         min-height: 600px;
-        margin: 2em;
+        margin-bottom: 100px;
         .item {
             .carousel-caption {
                 font-family: $text-font-stack;
                 font-size: 70px;
                 position: relative;
                 color: $white-color;   
+                text-shadow: none;
                 @extend .clearElement;    
                 a[role=button] {
                     width: 160px;
@@ -38,8 +39,8 @@
         align-items: center;
         position: relative;
         width: 100%;
-        left: 0;
-        margin: 0 0 2em;
+        @extend .clearElement;
+        top: -60px;        
         li {
             width: 280px;
             height: 3px;
@@ -47,12 +48,11 @@
             border: none;
             background-color: rgba(255, 255, 255, 0.5);
             text-indent: 0;
-            margin: 1.5em;
+            @extend .clearElement;            
             &.active {
-                background-color: $pink-orange-color;
-
+                background-color: $pink-orange-color;                
                 .ind-caption {
-                    * {
+                    * {                        
                         color: $white-color;
                     }
                 }
@@ -65,22 +65,27 @@
                     color: rgba(255, 255, 255, 0.5);
                     font-family: $text-font-stack;
                     text-align: left;
-                    padding: 0;
+                    padding: 20px 0;
                     margin: 0;
                 }
 
                 span {                    
                     font-size: 24px;
-                    font-weight: 700;                    
+                    font-weight: 700;  
+                    padding: 13px 10px 10px 0;                   
                 }
                 p {
                     font-size: 18px;
                     font-weight: 400;
                     text-transform: uppercase;
-                    padding: 0.2em 0.5em;
                 }
             }
         }
     }
 }
+
+/* Carousel Media Queries */
+@media only screen and (min-width: 0) and (max-width: 1209px) {
+}
+/* end of Carousel Media Queries */
 /* end of Header Carousel styles */

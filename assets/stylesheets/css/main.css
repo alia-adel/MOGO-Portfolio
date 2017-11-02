@@ -2,7 +2,7 @@
 /* Application secondary tetx color */
 /* Application background color */
 /* Clears elements margin, padding & positioning*/
-.clearElement, #myCarousel .carousel-inner .item .carousel-caption {
+.clearElement, #myCarousel .carousel-inner .item .carousel-caption, #myCarousel .carousel-indicators, #myCarousel .carousel-indicators li {
   margin: 0;
   padding: 0;
   top: 0;
@@ -37,9 +37,12 @@ a {
     color: #333333;
     text-decoration: none; }
 
+hr {
+  border: none; }
+
 .wrapper {
-  margin-top: 4em;
-  margin-bottom: 4em; }
+  width: 1210px;
+  margin: 25px auto; }
 
 /* Section Header styles */
 .section-header {
@@ -67,6 +70,12 @@ a {
   text-align: center;
   padding: 1em; }
 
+/* Statistics row media queries */
+@media only screen and (min-width: 0) and (max-width: 1209px) {
+  .wrapper {
+    width: 90%; } }
+
+/* end of statistics row media queries */
 /* Application header styles */
 .top-row {
   width: 100%;
@@ -78,58 +87,60 @@ a {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom, #f38181, #fce38a);
   /* Standard syntax (must be last) */ }
-  .top-row .header-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    overflow-wrap: break-word;
-    padding: 1em; }
-    .top-row .header-row .logo {
-      font-size: 30px;
-      font-weight: 700;
-      color: #ffffff; }
-    .top-row .header-row nav .nav {
+  .top-row .wrapper {
+    margin-top: 0; }
+    .top-row .wrapper .header-row {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      overflow-wrap: break-word; }
-      .top-row .header-row nav .nav .nav-item {
+      flex-wrap: wrap;
+      padding: 1em; }
+      .top-row .wrapper .header-row .logo {
+        font-size: 30px;
+        font-weight: 700;
+        color: #ffffff; }
+      .top-row .wrapper .header-row nav .nav {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        overflow-wrap: break-word;
-        align-items: center;
-        padding: 0;
-        margin: 0 0.5em; }
-        .top-row .header-row nav .nav .nav-item .nav-link {
-          font-family: "Montserrat", sans-serif;
-          font-weight: 400;
-          color: #ffffff;
-          text-transform: uppercase; }
-          .top-row .header-row nav .nav .nav-item .nav-link.active {
-            color: #fce38a;
-            border-bottom: 1px solid #fce38a; }
-          .top-row .header-row nav .nav .nav-item .nav-link:hover, .top-row .header-row nav .nav .nav-item .nav-link:active, .top-row .header-row nav .nav .nav-item .nav-link:focus {
-            color: #fce38a;
-            background: none; }
-        .top-row .header-row nav .nav .nav-item .fa {
-          font-weight: 400;
-          color: #ffffff;
-          min-width: 30px; }
-  .top-row .section-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow-wrap: break-word;
-    align-items: center; }
-    .top-row .section-header * {
-      color: #ffffff; }
-    .top-row .section-header .head1 {
-      font-size: 72px; }
-    .top-row .section-header .head2 {
-      font-size: 150px; }
-    .top-row .section-header .seperator {
-      background-color: inherit; }
+        justify-content: space-between;
+        flex-wrap: wrap; }
+        .top-row .wrapper .header-row nav .nav .nav-item {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+          align-items: center;
+          padding: 0;
+          margin: 0 0.5em; }
+          .top-row .wrapper .header-row nav .nav .nav-item .nav-link {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            color: #ffffff;
+            text-transform: uppercase; }
+            .top-row .wrapper .header-row nav .nav .nav-item .nav-link.active {
+              color: #fce38a;
+              border-bottom: 1px solid #fce38a; }
+            .top-row .wrapper .header-row nav .nav .nav-item .nav-link:hover, .top-row .wrapper .header-row nav .nav .nav-item .nav-link:active, .top-row .wrapper .header-row nav .nav .nav-item .nav-link:focus {
+              color: #fce38a;
+              background: none; }
+          .top-row .wrapper .header-row nav .nav .nav-item .fa {
+            font-weight: 400;
+            color: #ffffff;
+            min-width: 30px; }
+    .top-row .wrapper .section-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center; }
+      .top-row .wrapper .section-header * {
+        color: #ffffff; }
+      .top-row .wrapper .section-header .head1 {
+        font-size: 72px; }
+      .top-row .wrapper .section-header .head2 {
+        font-size: 150px; }
+      .top-row .wrapper .section-header .seperator {
+        background-color: inherit; }
 
 /* end of application header styles */
 /* Header Carousel styles */
@@ -137,16 +148,17 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow-wrap: break-word;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
   min-height: 600px;
-  margin: 2em; }
+  margin-bottom: 100px; }
   #myCarousel .carousel-inner .item .carousel-caption {
     font-family: "Montserrat", sans-serif;
     font-size: 70px;
     position: relative;
-    color: #ffffff; }
+    color: #ffffff;
+    text-shadow: none; }
     #myCarousel .carousel-inner .item .carousel-caption a[role=button] {
       width: 160px;
       height: 40px;
@@ -164,20 +176,18 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  overflow-wrap: break-word;
+  flex-wrap: wrap;
   align-items: center;
   position: relative;
   width: 100%;
-  left: 0;
-  margin: 0 0 2em; }
+  top: -60px; }
   #myCarousel .carousel-indicators li {
     width: 280px;
     height: 3px;
     border-radius: 0;
     border: none;
     background-color: rgba(255, 255, 255, 0.5);
-    text-indent: 0;
-    margin: 1.5em; }
+    text-indent: 0; }
     #myCarousel .carousel-indicators li.active {
       background-color: #f38181; }
       #myCarousel .carousel-indicators li.active .ind-caption * {
@@ -186,22 +196,24 @@ a {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
-      overflow-wrap: break-word; }
+      flex-wrap: wrap; }
       #myCarousel .carousel-indicators li .ind-caption * {
         color: rgba(255, 255, 255, 0.5);
         font-family: "Montserrat", sans-serif;
         text-align: left;
-        padding: 0;
+        padding: 20px 0;
         margin: 0; }
       #myCarousel .carousel-indicators li .ind-caption span {
         font-size: 24px;
-        font-weight: 700; }
+        font-weight: 700;
+        padding: 13px 10px 10px 0; }
       #myCarousel .carousel-indicators li .ind-caption p {
         font-size: 18px;
         font-weight: 400;
-        text-transform: uppercase;
-        padding: 0.2em 0.5em; }
+        text-transform: uppercase; }
 
+/* Carousel Media Queries */
+/* end of Carousel Media Queries */
 /* end of Header Carousel styles */
 /* General card styles */
 .imaged-card {
@@ -220,7 +232,7 @@ a {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      overflow-wrap: break-word;
+      flex-wrap: wrap;
       width: 100%;
       height: 100%;
       align-items: center;
@@ -244,8 +256,8 @@ a {
       .imaged-card:hover .overlay-card .card-text {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        overflow-wrap: break-word;
+        justify-content: space-around;
+        flex-wrap: wrap;
         align-items: center;
         color: #ffffff;
         z-index: 10;
@@ -254,30 +266,14 @@ a {
           font-size: 18px;
           font-weight: 700;
           color: #ffffff;
-          margin: 0.5em; }
+          margin: auto; }
 
 /* General card styles */
-/* Cards specific to the stories */
-.stories .story-card {
-  width: 380px;
-  height: 250px; }
-  .stories .story-card:hover .overlay-card .card-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow-wrap: break-word;
-    align-items: center;
-    color: #ffffff;
-    z-index: 10;
-    opacity: 1; }
-    .stories .story-card:hover .overlay-card .card-text span {
-      text-transform: uppercase;
-      font-weight: 700; }
-
-/* end of Cards specific to the stories */
 /* general article card */
 .article-card {
-  padding: 5px; }
+  padding: 25px;
+  width: 350px;
+  min-width: 350px; }
   .article-card .card-icon {
     color: #95e1d3; }
   .article-card .card-title {
@@ -288,50 +284,90 @@ a {
     padding-bottom: 5px; }
   .article-card .card-txt {
     font-family: "Roboto", sans-serif;
+    font-weight: 400;
     color: #999999;
     text-align: left; }
 
 /* end of general article card */
-/* Specific article cards for Services */
-.services-items .services-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  overflow-wrap: break-word;
-  align-items: flex-end; }
-
-/* end of Specific article cards for Services */
+/* Cards row media queries */
+/* end of cards row media queries */
 /* Staistics item styles */
 .stats-item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow-wrap: break-word;
+  flex-wrap: wrap;
   flex-grow: 1;
   padding: 2em;
   margin: 0;
   border: 1px solid rgba(255, 255, 255, 0.3); }
   .stats-item * {
+    font-family: "Montserrat", sans-serif;
     color: #ffffff;
     text-align: center; }
   .stats-item .stats-val {
     font-size: 72px;
     font-weight: 700;
     text-align: center; }
+  .stats-item .stats-txt {
+    text-transform: uppercase; }
 
 /* end of Staistics item styles */
 /* Staistics row styles */
 .stats-row {
   background-color: #95e1d3; }
-  .stats-row div.container {
+  .stats-row div.wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    overflow-wrap: break-word; }
+    flex-wrap: wrap; }
 
 /* end of Staistics row styles */
+/* Statistics row media queries */
+/* end of statistics row media queries */
+/* Cards specific to the stories */
 .stories {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  overflow-wrap: break-word; }
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .stories .story-card {
+    width: 380px;
+    height: 250px; }
+    .stories .story-card:hover .overlay-card .card-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+      color: #ffffff;
+      z-index: 10;
+      opacity: 1; }
+      .stories .story-card:hover .overlay-card .card-text span {
+        text-transform: uppercase;
+        font-weight: 700; }
+
+/* end of Cards specific to the stories */
+/* Specific article cards for Services */
+.services-items .services-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: baseline;
+  border-bottom: 1px solid  #e5e5e5; }
+  .services-items .services-row:last-child {
+    border-bottom: none; }
+
+/* end of Specific article cards for Services */
+/* Home page row media queries */
+@media only screen and (min-width: 0) and (max-width: 1209px) {
+  .top-row .wrapper #myCarousel {
+    display: none; } }
+
+/* Home page row media queries */
+@media only screen and (min-width: 0) and (max-width: 800px) {
+  .top-row .wrapper .header-row #myNavbar {
+    display: none; } }
+
+/* end of Home page row media queries */
