@@ -5,23 +5,29 @@
 /* Application header styles */
 .top-row {
     width: 100%;    
-    //TODO move the below to mixin    
-    background: -webkit-linear-gradient(bottom, #f38181, #fce38a); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom, #f38181, #fce38a); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom, #f38181, #fce38a); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom, #f38181, #fce38a); /* Standard syntax (must be last) */
+    @extend .rainbow-bg;
+
     .wrapper {
         margin-top: 0;
-        .header-row {        
+
+        #header-row {        
             @include align-horizontally (space-between);    
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
             padding: 1em;
-            
+            transition: all 1s;
+
+            .fa-bars {
+                display: none;
+            }
+
             .logo {
                 font-size: 30px;
                 font-weight: 700;
                 color: $white-color;                        
             }
-            nav {
+            #myNavbar {
                 .nav {
                     @include align-horizontally (space-between);
                     .nav-item {
@@ -78,4 +84,41 @@
     }
 
 }
+
+// Fixed header styles
+#fixed-head-nav {
+    display: none;
+    &.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        height: 70px;
+        max-height: 70px;  
+        z-index: 15;  
+        #fixed-head-wrap {
+            
+        }
+    }
+}
+
+/* Header media queries */
+@media only screen and (min-width: 0) and (max-width: 800px) {
+    .top-row {
+        .wrapper {
+            #header-row {
+                .fa-bars {
+                    display: block;
+                    color: $white-color;
+                    cursor: pointer;
+                    padding: 0 10px;
+                }
+                #myNavbar {
+                    display: none;
+                }                
+            }
+        }
+    }
+}
+/* end of Header row media queries */
+
 /* end of application header styles */

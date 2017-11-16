@@ -39,31 +39,3 @@
     }
 } 
 /* end of Specific article cards for Services */
-
-
-
-/* Home page row media queries */
-@media only screen and (min-width: 0) and (max-width: 1209px) {
-    .top-row {
-        .wrapper {
-            #myCarousel {
-                display: none;
-            }
-        }
-    }
-}
-
-/* Home page row media queries */
-@media only screen and (min-width: 0) and (max-width: 800px) {
-    .top-row {
-        .wrapper {
-            .header-row {
-                #myNavbar {
-                    display: none;
-                }                
-            }
-        }
-    }
-}
-
-/* end of Home page row media queries */

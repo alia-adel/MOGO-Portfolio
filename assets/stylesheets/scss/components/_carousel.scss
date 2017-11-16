@@ -84,8 +84,15 @@
     }
 }
 
-/* Carousel Media Queries */
+/* Carousel Header Media Queries */
 @media only screen and (min-width: 0) and (max-width: 1209px) {
+    .top-row {
+        .wrapper {
+            #myCarousel {
+                display: none;
+            }
+        }
+    }
 }
-/* end of Carousel Media Queries */
+/* end of Carousel Header Media Queries */
 /* end of Header Carousel styles */

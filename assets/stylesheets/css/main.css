@@ -1,15 +1,6 @@
 /* Application primary text color */
 /* Application secondary tetx color */
 /* Application background color */
-/* Clears elements margin, padding & positioning*/
-.clearElement, #myCarousel .carousel-inner .item .carousel-caption, #myCarousel .carousel-indicators, #myCarousel .carousel-indicators li {
-  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; }
-
 /**
  * Set up a decent box model on the root element
  */
@@ -70,15 +61,8 @@ hr {
   text-align: center;
   padding: 1em; }
 
-/* Statistics row media queries */
-@media only screen and (min-width: 0) and (max-width: 1209px) {
-  .wrapper {
-    width: 90%; } }
-
-/* end of statistics row media queries */
-/* Application header styles */
-.top-row {
-  width: 100%;
+/* Add a colored background */
+.rainbow-bg, .top-row {
   background: -webkit-linear-gradient(bottom, #f38181, #fce38a);
   /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom, #f38181, #fce38a);
@@ -87,43 +71,126 @@ hr {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom, #f38181, #fce38a);
   /* Standard syntax (must be last) */ }
+
+/* Statistics row media queries */
+@media only screen and (min-width: 0) and (max-width: 1209px) {
+  .wrapper {
+    width: 90%; } }
+
+/* end of statistics row media queries */
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table; }
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  max-width: 1180px;
+  /* 1 */
+  margin-left: auto;
+  /* 2 */
+  margin-right: auto;
+  /* 2 */
+  padding-left: 20px;
+  /* 3 */
+  padding-right: 20px;
+  /* 3 */
+  width: 100%;
+  /* 1 */ }
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap; }
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/* Clears elements margin, padding & positioning*/
+.clearElement, #myCarousel .carousel-inner .item .carousel-caption, #myCarousel .carousel-indicators, #myCarousel .carousel-indicators li {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+/* Application header styles */
+.top-row {
+  width: 100%; }
   .top-row .wrapper {
     margin-top: 0; }
-    .top-row .wrapper .header-row {
+    .top-row .wrapper #header-row {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding: 1em; }
-      .top-row .wrapper .header-row .logo {
+      align-items: center;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      padding: 1em;
+      transition: all 1s; }
+      .top-row .wrapper #header-row .fa-bars {
+        display: none; }
+      .top-row .wrapper #header-row .logo {
         font-size: 30px;
         font-weight: 700;
         color: #ffffff; }
-      .top-row .wrapper .header-row nav .nav {
+      .top-row .wrapper #header-row #myNavbar .nav {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        flex-wrap: wrap; }
-        .top-row .wrapper .header-row nav .nav .nav-item {
+        flex-wrap: wrap;
+        align-items: center; }
+        .top-row .wrapper #header-row #myNavbar .nav .nav-item {
           display: flex;
           flex-direction: row;
           justify-content: center;
           flex-wrap: wrap;
           align-items: center;
+          align-items: center;
           padding: 0;
           margin: 0 0.5em; }
-          .top-row .wrapper .header-row nav .nav .nav-item .nav-link {
+          .top-row .wrapper #header-row #myNavbar .nav .nav-item .nav-link {
             font-family: "Montserrat", sans-serif;
             font-weight: 400;
             color: #ffffff;
             text-transform: uppercase; }
-            .top-row .wrapper .header-row nav .nav .nav-item .nav-link.active {
+            .top-row .wrapper #header-row #myNavbar .nav .nav-item .nav-link.active {
               color: #fce38a;
               border-bottom: 1px solid #fce38a; }
-            .top-row .wrapper .header-row nav .nav .nav-item .nav-link:hover, .top-row .wrapper .header-row nav .nav .nav-item .nav-link:active, .top-row .wrapper .header-row nav .nav .nav-item .nav-link:focus {
+            .top-row .wrapper #header-row #myNavbar .nav .nav-item .nav-link:hover, .top-row .wrapper #header-row #myNavbar .nav .nav-item .nav-link:active, .top-row .wrapper #header-row #myNavbar .nav .nav-item .nav-link:focus {
               color: #fce38a;
               background: none; }
-          .top-row .wrapper .header-row nav .nav .nav-item .fa {
+          .top-row .wrapper #header-row #myNavbar .nav .nav-item .fa {
             font-weight: 400;
             color: #ffffff;
             min-width: 30px; }
@@ -142,6 +209,27 @@ hr {
       .top-row .wrapper .section-header .seperator {
         background-color: inherit; }
 
+#fixed-head-nav {
+  display: none; }
+  #fixed-head-nav.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    height: 70px;
+    max-height: 70px;
+    z-index: 15; }
+
+/* Header media queries */
+@media only screen and (min-width: 0) and (max-width: 800px) {
+  .top-row .wrapper #header-row .fa-bars {
+    display: block;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0 10px; }
+  .top-row .wrapper #header-row #myNavbar {
+    display: none; } }
+
+/* end of Header row media queries */
 /* end of application header styles */
 /* Header Carousel styles */
 #myCarousel .carousel-inner {
@@ -178,6 +266,7 @@ hr {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+  align-items: center;
   position: relative;
   width: 100%;
   top: -60px; }
@@ -196,7 +285,8 @@ hr {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      align-items: center; }
       #myCarousel .carousel-indicators li .ind-caption * {
         color: rgba(255, 255, 255, 0.5);
         font-family: "Montserrat", sans-serif;
@@ -212,8 +302,12 @@ hr {
         font-weight: 400;
         text-transform: uppercase; }
 
-/* Carousel Media Queries */
-/* end of Carousel Media Queries */
+/* Carousel Header Media Queries */
+@media only screen and (min-width: 0) and (max-width: 1209px) {
+  .top-row .wrapper #myCarousel {
+    display: none; } }
+
+/* end of Carousel Header Media Queries */
 /* end of Header Carousel styles */
 /* General card styles */
 .imaged-card {
@@ -320,7 +414,8 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    align-items: center; }
 
 /* end of Staistics row styles */
 /* Statistics row media queries */
@@ -330,7 +425,8 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  align-items: center; }
   .stories .story-card {
     width: 380px;
     height: 250px; }
@@ -354,20 +450,10 @@ hr {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  align-items: center;
   align-items: baseline;
   border-bottom: 1px solid  #e5e5e5; }
   .services-items .services-row:last-child {
     border-bottom: none; }
 
 /* end of Specific article cards for Services */
-/* Home page row media queries */
-@media only screen and (min-width: 0) and (max-width: 1209px) {
-  .top-row .wrapper #myCarousel {
-    display: none; } }
-
-/* Home page row media queries */
-@media only screen and (min-width: 0) and (max-width: 800px) {
-  .top-row .wrapper .header-row #myNavbar {
-    display: none; } }
-
-/* end of Home page row media queries */
