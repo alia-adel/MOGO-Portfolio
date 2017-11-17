@@ -4,6 +4,7 @@
 
 /* Header Carousel styles */
 #myCarousel {
+    padding-top: 70px;
     .carousel-inner {
         @include align-vertically(space-between);
         align-items: center;

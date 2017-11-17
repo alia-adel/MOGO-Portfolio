@@ -15,40 +15,43 @@
 
 <body class="app-container">
     <!-- First row that includes header & carousel -->
+    <!-- Fixed Header to appear with scroll -->
+    <div id="head-wrap">
+        <header id="header-row" class="wrapper"> 
+            <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+            <span class="logo">MoGo</span>
+            <nav id="myNavbar">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <a href="#" class="nav-item">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!--end of  Fixed Header to appear with scroll -->
     <!-- \\TODO Background will be an image from unsplash -->
     <div class="top-row">
         <div class="wrapper">
-            <header id="header-row">
-                <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
-                <span class="logo">MoGo</span>
-                <nav id="myNavbar">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#service">Service</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#work">Work</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#blog">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                        <a href="#" class="nav-item">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="nav-item">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </a>
-                    </ul>
-                </nav>
-            </header>
             <div id="myCarousel" class="carousel slide carousel-row" data-ride="carousel">
-
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
@@ -113,12 +116,6 @@
             </div>
         </div>
     </div>
-    <!-- Fixed Header to appear with scroll -->
-    <div id="fixed-head-nav" class="top-row">
-        <div id="fixed-head-wrap" class="wrapper">
-            
-        </div>
-    </div> <!--end of  Fixed Header to appear with scroll -->
     <!-- end of First row that includes header & carousel -->
 
     <!-- Stories row -->

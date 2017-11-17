@@ -9,59 +9,6 @@
 
     .wrapper {
         margin-top: 0;
-
-        #header-row {        
-            @include align-horizontally (space-between);    
-            width: 100%;
-            min-width: 100%;
-            max-width: 100%;
-            padding: 1em;
-            transition: all 1s;
-
-            .fa-bars {
-                display: none;
-            }
-
-            .logo {
-                font-size: 30px;
-                font-weight: 700;
-                color: $white-color;                        
-            }
-            #myNavbar {
-                .nav {
-                    @include align-horizontally (space-between);
-                    .nav-item {
-                        @include align-horizontally (center);
-                        align-items: center;                   
-                        padding: 0;
-                        margin: 0 0.5em;
-    
-                        .nav-link {
-                            font-family: $text-font-stack;
-                            font-weight: 400;
-                            color: $white-color;
-                            text-transform: uppercase;
-    
-                            &.active {
-                                color: $orange-yellow-color;
-                                border-bottom: 1px solid $orange-yellow-color;
-                            }
-    
-                            @include on-event {
-                                color: $orange-yellow-color;
-                                background: none;                            
-                            }
-                        }
-    
-                        .fa {
-                            font-weight: 400;
-                            color: $white-color;
-                            min-width: 30px;
-                        }
-                    }
-                }
-            }
-        } 
     
         .section-header {
             @include align-vertically (space-between);   
@@ -85,39 +32,97 @@
 
 }
 
-// Fixed header styles
-#fixed-head-nav {
-    display: none;
-    &.active {
-        display: block;
-        position: fixed;
-        top: 0;
+
+#head-wrap {
+    @include align-horizontally (space-around);
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;       
+    z-index: 20;  
+   
+
+    #header-row {        
+        @include align-horizontally (space-between);
         height: 70px;
-        max-height: 70px;  
-        z-index: 15;  
-        #fixed-head-wrap {
-            
+        max-height: 70px;          
+        padding: 10px 5px;
+        margin: 0 !important; 
+    
+        .fa-bars {
+            display: none;
         }
-    }
+    
+        .logo {
+            font-size: 30px;
+            font-weight: 700;
+            color: $white-color;                        
+        }
+        #myNavbar {
+            .nav {
+                @include align-horizontally (space-between);
+                .nav-item {
+                    @include align-horizontally (center);
+                    align-items: center;                   
+                    padding: 0;
+                    margin: 0 0.5em;
+    
+                    .nav-link {
+                        font-family: $text-font-stack;
+                        font-weight: 400;
+                        color: $white-color;
+                        text-transform: uppercase;
+    
+                        &.active {
+                            color: $orange-yellow-color;
+                            border-bottom: 1px solid $orange-yellow-color;
+                        }
+    
+                        @include on-event {
+                            color: $orange-yellow-color;
+                            background: none;                            
+                        }
+                    }
+    
+                    .fa {
+                        font-weight: 400;
+                        color: $white-color;
+                        min-width: 30px;
+                    }
+                }
+            }
+        }
+    }     
 }
 
 /* Header media queries */
-@media only screen and (min-width: 0) and (max-width: 800px) {
-    .top-row {
-        .wrapper {
-            #header-row {
-                .fa-bars {
-                    display: block;
-                    color: $white-color;
-                    cursor: pointer;
-                    padding: 0 10px;
-                }
-                #myNavbar {
-                    display: none;
-                }                
-            }
-        }
+@media only screen and (min-width: 0) and (max-width: 1209px) {
+    #head-wrap {
+        background: -webkit-linear-gradient(bottom, #f38181, #fce38a); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(bottom, #f38181, #fce38a); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(bottom, #f38181, #fce38a); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to bottom, #f38181, #fce38a); /* Standard syntax (must be last) */
     }
+    .top-row {
+        padding-top: 70px;
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width: 800px) {   
+    #head-wrap {
+        #header-row {
+            .fa-bars {
+                display: block;
+                color: $white-color;
+                cursor: pointer;
+                padding: 0 10px;
+            }
+            #myNavbar {
+                display: none;
+            }                
+        }
+    }    
 }
 /* end of Header row media queries */
 

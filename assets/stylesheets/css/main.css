@@ -147,53 +147,6 @@ hr {
   width: 100%; }
   .top-row .wrapper {
     margin-top: 0; }
-    .top-row .wrapper #header-row {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items: center;
-      width: 100%;
-      min-width: 100%;
-      max-width: 100%;
-      padding: 1em;
-      transition: all 1s; }
-      .top-row .wrapper #header-row .fa-bars {
-        display: none; }
-      .top-row .wrapper #header-row .logo {
-        font-size: 30px;
-        font-weight: 700;
-        color: #ffffff; }
-      .top-row .wrapper #header-row #myNavbar .nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items: center; }
-        .top-row .wrapper #header-row #myNavbar .nav .nav-item {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          flex-wrap: wrap;
-          align-items: center;
-          align-items: center;
-          padding: 0;
-          margin: 0 0.5em; }
-          .top-row .wrapper #header-row #myNavbar .nav .nav-item .nav-link {
-            font-family: "Montserrat", sans-serif;
-            font-weight: 400;
-            color: #ffffff;
-            text-transform: uppercase; }
-            .top-row .wrapper #header-row #myNavbar .nav .nav-item .nav-link.active {
-              color: #fce38a;
-              border-bottom: 1px solid #fce38a; }
-            .top-row .wrapper #header-row #myNavbar .nav .nav-item .nav-link:hover, .top-row .wrapper #header-row #myNavbar .nav .nav-item .nav-link:active, .top-row .wrapper #header-row #myNavbar .nav .nav-item .nav-link:focus {
-              color: #fce38a;
-              background: none; }
-          .top-row .wrapper #header-row #myNavbar .nav .nav-item .fa {
-            font-weight: 400;
-            color: #ffffff;
-            min-width: 30px; }
     .top-row .wrapper .section-header {
       display: flex;
       flex-direction: column;
@@ -209,98 +162,161 @@ hr {
       .top-row .wrapper .section-header .seperator {
         background-color: inherit; }
 
-#fixed-head-nav {
-  display: none; }
-  #fixed-head-nav.active {
-    display: block;
-    position: fixed;
-    top: 0;
+#head-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  z-index: 20; }
+  #head-wrap #header-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
     height: 70px;
     max-height: 70px;
-    z-index: 15; }
+    padding: 10px 5px;
+    margin: 0 !important; }
+    #head-wrap #header-row .fa-bars {
+      display: none; }
+    #head-wrap #header-row .logo {
+      font-size: 30px;
+      font-weight: 700;
+      color: #ffffff; }
+    #head-wrap #header-row #myNavbar .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center; }
+      #head-wrap #header-row #myNavbar .nav .nav-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        align-items: center;
+        padding: 0;
+        margin: 0 0.5em; }
+        #head-wrap #header-row #myNavbar .nav .nav-item .nav-link {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 400;
+          color: #ffffff;
+          text-transform: uppercase; }
+          #head-wrap #header-row #myNavbar .nav .nav-item .nav-link.active {
+            color: #fce38a;
+            border-bottom: 1px solid #fce38a; }
+          #head-wrap #header-row #myNavbar .nav .nav-item .nav-link:hover, #head-wrap #header-row #myNavbar .nav .nav-item .nav-link:active, #head-wrap #header-row #myNavbar .nav .nav-item .nav-link:focus {
+            color: #fce38a;
+            background: none; }
+        #head-wrap #header-row #myNavbar .nav .nav-item .fa {
+          font-weight: 400;
+          color: #ffffff;
+          min-width: 30px; }
 
 /* Header media queries */
+@media only screen and (min-width: 0) and (max-width: 1209px) {
+  #head-wrap {
+    background: -webkit-linear-gradient(bottom, #f38181, #fce38a);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, #f38181, #fce38a);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, #f38181, #fce38a);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, #f38181, #fce38a);
+    /* Standard syntax (must be last) */ }
+  .top-row {
+    padding-top: 70px; } }
+
 @media only screen and (min-width: 0) and (max-width: 800px) {
-  .top-row .wrapper #header-row .fa-bars {
+  #head-wrap #header-row .fa-bars {
     display: block;
     color: #ffffff;
     cursor: pointer;
     padding: 0 10px; }
-  .top-row .wrapper #header-row #myNavbar {
+  #head-wrap #header-row #myNavbar {
     display: none; } }
 
 /* end of Header row media queries */
 /* end of application header styles */
 /* Header Carousel styles */
-#myCarousel .carousel-inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
-  min-height: 600px;
-  margin-bottom: 100px; }
-  #myCarousel .carousel-inner .item .carousel-caption {
-    font-family: "Montserrat", sans-serif;
-    font-size: 70px;
-    position: relative;
-    color: #ffffff;
-    text-shadow: none; }
-    #myCarousel .carousel-inner .item .carousel-caption a[role=button] {
-      width: 160px;
-      height: 40px;
-      color: #ffffff;
+#myCarousel {
+  padding-top: 70px; }
+  #myCarousel .carousel-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    min-height: 600px;
+    margin-bottom: 100px; }
+    #myCarousel .carousel-inner .item .carousel-caption {
       font-family: "Montserrat", sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      text-align: center;
-      text-transform: uppercase;
-      text-shadow: none;
-      border: 3px solid #ffffff;
-      padding: 0.5em 0; }
-
-#myCarousel .carousel-indicators {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  top: -60px; }
-  #myCarousel .carousel-indicators li {
-    width: 280px;
-    height: 3px;
-    border-radius: 0;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.5);
-    text-indent: 0; }
-    #myCarousel .carousel-indicators li.active {
-      background-color: #f38181; }
-      #myCarousel .carousel-indicators li.active .ind-caption * {
-        color: #ffffff; }
-    #myCarousel .carousel-indicators li .ind-caption {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      align-items: center; }
-      #myCarousel .carousel-indicators li .ind-caption * {
-        color: rgba(255, 255, 255, 0.5);
+      font-size: 70px;
+      position: relative;
+      color: #ffffff;
+      text-shadow: none; }
+      #myCarousel .carousel-inner .item .carousel-caption a[role=button] {
+        width: 160px;
+        height: 40px;
+        color: #ffffff;
         font-family: "Montserrat", sans-serif;
-        text-align: left;
-        padding: 20px 0;
-        margin: 0; }
-      #myCarousel .carousel-indicators li .ind-caption span {
-        font-size: 24px;
+        font-size: 14px;
         font-weight: 700;
-        padding: 13px 10px 10px 0; }
-      #myCarousel .carousel-indicators li .ind-caption p {
-        font-size: 18px;
-        font-weight: 400;
-        text-transform: uppercase; }
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: none;
+        border: 3px solid #ffffff;
+        padding: 0.5em 0; }
+  #myCarousel .carousel-indicators {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    top: -60px; }
+    #myCarousel .carousel-indicators li {
+      width: 280px;
+      height: 3px;
+      border-radius: 0;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.5);
+      text-indent: 0; }
+      #myCarousel .carousel-indicators li.active {
+        background-color: #f38181; }
+        #myCarousel .carousel-indicators li.active .ind-caption * {
+          color: #ffffff; }
+      #myCarousel .carousel-indicators li .ind-caption {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: center; }
+        #myCarousel .carousel-indicators li .ind-caption * {
+          color: rgba(255, 255, 255, 0.5);
+          font-family: "Montserrat", sans-serif;
+          text-align: left;
+          padding: 20px 0;
+          margin: 0; }
+        #myCarousel .carousel-indicators li .ind-caption span {
+          font-size: 24px;
+          font-weight: 700;
+          padding: 13px 10px 10px 0; }
+        #myCarousel .carousel-indicators li .ind-caption p {
+          font-size: 18px;
+          font-weight: 400;
+          text-transform: uppercase; }
 
 /* Carousel Header Media Queries */
 @media only screen and (min-width: 0) and (max-width: 1209px) {
