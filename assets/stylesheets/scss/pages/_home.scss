@@ -38,4 +38,13 @@
         }
     }
 } 
+
+/* Media Query for Specific article cards for Services  */
+@media only screen and (min-width: 0) and (max-width: 1209px) {
+    .services-items {
+        .services-row {
+            border-bottom: none;
+        }
+    }
+} /* end of Media Query for Specific article cards for Services  */
 /* end of Specific article cards for Services */

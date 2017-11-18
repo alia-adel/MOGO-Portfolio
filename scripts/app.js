@@ -44,3 +44,17 @@ $(document).scroll((event) => {
         console.log(`Error occured while trying to get Carousel rectangle: ${error}`);
     }    
 });
+
+/**
+ * @description toggle left navigation
+ */
+$('#nav-toggle').click((event) => {
+    $('#myNavbar').toggleClass('active');
+});
+
+/**
+ * @description toggle left navigation
+ */
+$('#nav-close').click((event) => {
+    $('#myNavbar').removeClass('active');
+});

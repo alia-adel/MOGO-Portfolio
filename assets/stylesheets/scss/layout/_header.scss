@@ -50,46 +50,71 @@
         padding: 10px 5px;
         margin: 0 !important; 
     
-        .fa-bars {
-            display: none;
+        #header-left {
+            @include align-horizontally (flex-start);
+            .fa-bars {
+                display: none;
+            }
+        
+            .logo {
+                font-size: 30px;
+                font-weight: 700;
+                color: $white-color;                        
+            }
         }
+
+        #header-right {
+            @include align-horizontally (flex-end);
+            #myNavbar {
+                #nav-close {
+                    display: none;
+                    color: $white-color;
+                    float: right;
+                    right: 0;                                                
+                    padding: 20px;
+                    cursor: pointer;
+                }
+                
+                .nav {
+                    @include align-horizontally (space-between);
+                    .nav-item {
+                        @include align-horizontally (center);
+                        align-items: center;                   
+                        padding: 0;
+                        margin: 0 0.5em;
+        
+                        .nav-link {
+                            font-family: $text-font-stack;
+                            font-weight: 400;
+                            color: $white-color;
+                            text-transform: uppercase;
+        
+                            &.active {
+                                color: $orange-yellow-color;
+                                border-bottom: 1px solid $orange-yellow-color;
+                            }
+        
+                            @include on-event {
+                                color: $orange-yellow-color;
+                                background: none;                            
+                            }
+                        }
+        
+                        .fa {
+                            font-weight: 400;
+                            color: $white-color;
+                            min-width: 30px;
+                        }
+                    }
+                }
+            }
     
-        .logo {
-            font-size: 30px;
-            font-weight: 700;
-            color: $white-color;                        
-        }
-        #myNavbar {
-            .nav {
+            #app-actions {
                 @include align-horizontally (space-between);
-                .nav-item {
-                    @include align-horizontally (center);
-                    align-items: center;                   
-                    padding: 0;
-                    margin: 0 0.5em;
-    
-                    .nav-link {
-                        font-family: $text-font-stack;
-                        font-weight: 400;
-                        color: $white-color;
-                        text-transform: uppercase;
-    
-                        &.active {
-                            color: $orange-yellow-color;
-                            border-bottom: 1px solid $orange-yellow-color;
-                        }
-    
-                        @include on-event {
-                            color: $orange-yellow-color;
-                            background: none;                            
-                        }
-                    }
-    
-                    .fa {
-                        font-weight: 400;
-                        color: $white-color;
-                        min-width: 30px;
-                    }
+                padding: 0 10px;
+                * {
+                    color: $white-color;
+                    margin: 0 5px;
                 }
             }
         }
@@ -99,12 +124,13 @@
 /* Header media queries */
 @media only screen and (min-width: 0) and (max-width: 1209px) {
     #head-wrap {
-        background: -webkit-linear-gradient(bottom, #f38181, #fce38a); /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(bottom, #f38181, #fce38a); /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(bottom, #f38181, #fce38a); /* For Firefox 3.6 to 15 */
-        background: linear-gradient(to bottom, #f38181, #fce38a); /* Standard syntax (must be last) */
+        background: -webkit-linear-gradient(bottom, $pink-orange-color, $orange-yellow-color); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(bottom, $pink-orange-color, $orange-yellow-color); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(bottom, $pink-orange-color, $orange-yellow-color); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to bottom, $pink-orange-color, $orange-yellow-color); /* Standard syntax (must be last) */
     }
     .top-row {
+        background: none;
         padding-top: 70px;
     }
 }
@@ -112,15 +138,47 @@
 @media only screen and (min-width: 0) and (max-width: 800px) {   
     #head-wrap {
         #header-row {
-            .fa-bars {
-                display: block;
-                color: $white-color;
-                cursor: pointer;
-                padding: 0 10px;
+
+            #header-left {
+                .fa-bars {
+                    display: block;
+                    color: $white-color;
+                    cursor: pointer;
+                    padding: 0 10px;
+                }
             }
-            #myNavbar {
-                display: none;
-            }                
+            #header-right {
+                nav {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 25;
+                    margin-left: -200px;
+                    width: 200px;
+                    min-width: 200px;
+                    height: 100%;
+                    overflow: auto;
+                    background: -webkit-linear-gradient(bottom, $pink-orange-color, $orange-yellow-color); /* For Safari 5.1 to 6.0 */
+                    background: -o-linear-gradient(bottom, $pink-orange-color, $orange-yellow-color); /* For Opera 11.1 to 12.0 */
+                    background: -moz-linear-gradient(bottom, $pink-orange-color, $orange-yellow-color); /* For Firefox 3.6 to 15 */
+                    background: linear-gradient(to bottom, $pink-orange-color, $orange-yellow-color); /* Standard syntax (must be last) */
+                    transition: margin 1s;
+    
+                    &.active {
+                        margin-left: 0;
+    
+                        #nav-close {
+                            display: block !important;
+                        }
+    
+                        ul.nav {
+                            padding-top: 70px;
+                            flex-direction: column !important;
+                            align-items: flex-start !important;
+                        }
+                    }
+                }
+            }                            
         }
     }    
 }

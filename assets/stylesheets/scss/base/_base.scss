@@ -79,18 +79,16 @@ hr {
 
 /* Add a colored background */
 .rainbow-bg {
-  //TODO move the below to mixin    
-  background: -webkit-linear-gradient(bottom, #f38181, #fce38a); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom, #f38181, #fce38a); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom, #f38181, #fce38a); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom, #f38181, #fce38a); /* Standard syntax (must be last) */
+  background: -webkit-linear-gradient(bottom, $pink-orange-color, $orange-yellow-color); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, $pink-orange-color, $orange-yellow-color); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, $pink-orange-color, $orange-yellow-color); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, $pink-orange-color, $orange-yellow-color); /* Standard syntax (must be last) */
 }
 
 /* Statistics row media queries */
 @media only screen and (min-width: 0) and (max-width: 1209px) {
   .wrapper {
-    width: 90%;
-    min-width: 340px;
+    width: 100%;
   }
 }
 /* end of statistics row media queries */
