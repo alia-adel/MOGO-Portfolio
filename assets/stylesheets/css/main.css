@@ -75,7 +75,8 @@ hr {
 /* Statistics row media queries */
 @media only screen and (min-width: 0) and (max-width: 1209px) {
   .wrapper {
-    width: 90%; } }
+    width: 90%;
+    min-width: 340px; } }
 
 /* end of statistics row media queries */
 /**
