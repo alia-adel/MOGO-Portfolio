@@ -1,0 +1,22 @@
+  /* Section Header styles */
+  .section-header {
+    padding: 20px;
+    margin: 0;
+  
+    .head1 {
+      font-family: $text-italic-font-stack;
+      font-size: 24px;
+      text-align: center;
+    }
+    .head2 {    
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;    
+    }
+    .seperator {
+      background-color: $pink-orange-color;
+      width: 60px;
+      height: 3px;
+    }
+  } /* end of Section Header styles */

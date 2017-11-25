@@ -1,6 +1,62 @@
-/* Application primary text color */
-/* Application secondary tetx color */
-/* Application background color */
+/* General styles */
+.align-horizontally {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center; }
+
+.align-vertically, .imaged-card:hover .overlay-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+.space-around {
+  justify-content: space-around; }
+
+.space-evenly {
+  justify-content: space-evenly; }
+
+.space-between {
+  justify-content: space-between; }
+
+.center {
+  justify-content: center; }
+
+.start {
+  justify-content: flex-start; }
+
+.end {
+  justify-content: flex-end; }
+
+/* end of General styles */
+.wrapper {
+  width: 1210px;
+  margin: 25px auto; }
+
+/* General paragraph style */
+.paragraph {
+  font-family: "Roboto", sans-serif;
+  color: #999;
+  text-align: center;
+  padding: 1em; }
+
+/* Add a colored background */
+.rainbow-bg, .imaged-card:hover .overlay-card {
+  background: -webkit-linear-gradient(bottom, #f38181, #fce38a);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, #f38181, #fce38a);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, #f38181, #fce38a);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #f38181, #fce38a);
+  /* Standard syntax (must be last) */ }
+
+/* Statistics row media queries */
+@media only screen and (min-width: 0) and (max-width: 1209px) {
+  .wrapper {
+    width: 100%; } }
+
+/* end of statistics row media queries */
 /**
  * Set up a decent box model on the root element
  */
@@ -31,53 +87,6 @@ a {
 hr {
   border: none; }
 
-.wrapper {
-  width: 1210px;
-  margin: 25px auto; }
-
-/* Section Header styles */
-.section-header {
-  padding: 20px;
-  margin: 0; }
-  .section-header .head1 {
-    font-family: "Kaushan Script", cursive;
-    font-size: 24px;
-    text-align: center; }
-  .section-header .head2 {
-    font-size: 30px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase; }
-  .section-header .seperator {
-    background-color: #f38181;
-    width: 60px;
-    height: 3px; }
-
-/* end of Section Header styles */
-/* General paragraph style */
-.paragraph {
-  font-family: "Roboto", sans-serif;
-  color: #999;
-  text-align: center;
-  padding: 1em; }
-
-/* Add a colored background */
-.rainbow-bg, .top-row {
-  background: -webkit-linear-gradient(bottom, #f38181, #fce38a);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom, #f38181, #fce38a);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom, #f38181, #fce38a);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom, #f38181, #fce38a);
-  /* Standard syntax (must be last) */ }
-
-/* Statistics row media queries */
-@media only screen and (min-width: 0) and (max-width: 1209px) {
-  .wrapper {
-    width: 100%; } }
-
-/* end of statistics row media queries */
 /**
  * Clear inner floats
  */
@@ -148,10 +157,6 @@ hr {
   .top-row .wrapper {
     margin-top: 0; }
     .top-row .wrapper .section-header {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex-wrap: wrap;
       align-items: center; }
       .top-row .wrapper .section-header * {
         color: #fff; }
@@ -163,11 +168,6 @@ hr {
         background-color: inherit; }
 
 #head-wrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
@@ -175,80 +175,47 @@ hr {
   max-width: 100%;
   z-index: 20; }
   #head-wrap #header-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
     height: 70px;
     max-height: 70px;
     padding: 10px 5px;
     margin: 0 !important; }
-    #head-wrap #header-row #header-left {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      align-items: center; }
-      #head-wrap #header-row #header-left .fa-bars {
-        display: none; }
-      #head-wrap #header-row #header-left .logo {
-        font-size: 30px;
-        font-weight: 700;
-        color: #fff; }
-    #head-wrap #header-row #header-right {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      align-items: center; }
-      #head-wrap #header-row #header-right #myNavbar #nav-close {
-        display: none;
+    #head-wrap #header-row #header-left .fa-bars {
+      display: none; }
+    #head-wrap #header-row #header-left .logo {
+      font-size: 30px;
+      font-weight: 700;
+      color: #fff; }
+    #head-wrap #header-row #header-right #myNavbar #nav-close {
+      display: none;
+      color: #fff;
+      float: right;
+      right: 0;
+      padding: 20px;
+      cursor: pointer; }
+    #head-wrap #header-row #header-right #myNavbar .nav .nav-item {
+      align-items: center;
+      padding: 0;
+      margin: 0 0.5em; }
+      #head-wrap #header-row #header-right #myNavbar .nav .nav-item .nav-link {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
         color: #fff;
-        float: right;
-        right: 0;
-        padding: 20px;
-        cursor: pointer; }
-      #head-wrap #header-row #header-right #myNavbar .nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items: center; }
-        #head-wrap #header-row #header-right #myNavbar .nav .nav-item {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          flex-wrap: wrap;
-          align-items: center;
-          align-items: center;
-          padding: 0;
-          margin: 0 0.5em; }
-          #head-wrap #header-row #header-right #myNavbar .nav .nav-item .nav-link {
-            font-family: "Montserrat", sans-serif;
-            font-weight: 400;
-            color: #fff;
-            text-transform: uppercase; }
-            #head-wrap #header-row #header-right #myNavbar .nav .nav-item .nav-link.active {
-              color: #fce38a;
-              border-bottom: 1px solid #fce38a; }
-            #head-wrap #header-row #header-right #myNavbar .nav .nav-item .nav-link:hover, #head-wrap #header-row #header-right #myNavbar .nav .nav-item .nav-link:active, #head-wrap #header-row #header-right #myNavbar .nav .nav-item .nav-link:focus {
-              color: #fce38a;
-              background: none; }
-          #head-wrap #header-row #header-right #myNavbar .nav .nav-item .fa {
-            font-weight: 400;
-            color: #fff;
-            min-width: 30px; }
-      #head-wrap #header-row #header-right #app-actions {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 0 10px; }
-        #head-wrap #header-row #header-right #app-actions * {
-          color: #fff;
-          margin: 0 5px; }
+        text-transform: uppercase; }
+        #head-wrap #header-row #header-right #myNavbar .nav .nav-item .nav-link.active {
+          color: #fce38a;
+          border-bottom: 1px solid #fce38a; }
+        #head-wrap #header-row #header-right #myNavbar .nav .nav-item .nav-link:hover, #head-wrap #header-row #header-right #myNavbar .nav .nav-item .nav-link:active, #head-wrap #header-row #header-right #myNavbar .nav .nav-item .nav-link:focus {
+          color: #fce38a;
+          background: none; }
+      #head-wrap #header-row #header-right #myNavbar .nav .nav-item .fa {
+        font-weight: 400;
+        color: #fff;
+        min-width: 30px; }
+    #head-wrap #header-row #header-right #app-actions {
+      padding: 0 10px; }
+      #head-wrap #header-row #header-right #app-actions * {
+        color: #fff;
+        margin: 0 5px; }
 
 /* Header media queries */
 @media only screen and (min-width: 0) and (max-width: 1209px) {
@@ -301,14 +268,29 @@ hr {
 
 /* end of Header row media queries */
 /* end of application header styles */
+/* Section Header styles */
+.section-header {
+  padding: 20px;
+  margin: 0; }
+  .section-header .head1 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 24px;
+    text-align: center; }
+  .section-header .head2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase; }
+  .section-header .seperator {
+    background-color: #f38181;
+    width: 60px;
+    height: 3px; }
+
+/* end of Section Header styles */
 /* Header Carousel styles */
 #myCarousel {
   padding-top: 70px; }
   #myCarousel .carousel-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
     width: 100%;
     min-height: 600px;
@@ -336,11 +318,6 @@ hr {
           -moz-box-shadow: 2px 2px 5px 0px white;
           box-shadow: 2px 2px 5px 0px white; }
   #myCarousel .carousel-indicators {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
     align-items: center;
     position: relative;
     width: 100%;
@@ -356,26 +333,20 @@ hr {
         background-color: #f38181; }
         #myCarousel .carousel-indicators li.active .ind-caption * {
           color: #fff; }
-      #myCarousel .carousel-indicators li .ind-caption {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        align-items: center; }
-        #myCarousel .carousel-indicators li .ind-caption * {
-          color: rgba(255, 255, 255, 0.5);
-          font-family: "Montserrat", sans-serif;
-          text-align: left;
-          padding: 20px 0;
-          margin: 0; }
-        #myCarousel .carousel-indicators li .ind-caption span {
-          font-size: 24px;
-          font-weight: 700;
-          padding: 13px 10px 10px 0; }
-        #myCarousel .carousel-indicators li .ind-caption p {
-          font-size: 18px;
-          font-weight: 400;
-          text-transform: uppercase; }
+      #myCarousel .carousel-indicators li .ind-caption * {
+        color: rgba(255, 255, 255, 0.5);
+        font-family: "Montserrat", sans-serif;
+        text-align: left;
+        padding: 20px 0;
+        margin: 0; }
+      #myCarousel .carousel-indicators li .ind-caption span {
+        font-size: 24px;
+        font-weight: 700;
+        padding: 13px 10px 10px 0; }
+      #myCarousel .carousel-indicators li .ind-caption p {
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase; }
 
 /* Carousel Header Media Queries */
 @media only screen and (min-width: 0) and (max-width: 1209px) {
@@ -398,35 +369,19 @@ hr {
     position: relative;
     bottom: 7px; }
     .imaged-card:hover .overlay-card {
-      display: flex;
-      flex-direction: column;
       justify-content: center;
-      flex-wrap: wrap;
       width: 100%;
       height: 100%;
-      align-items: center;
       position: relative;
       top: -100%;
       bottom: -100%;
       z-index: 10;
       opacity: 0.9;
-      background: -webkit-linear-gradient(bottom, #f38181, #fce38a);
-      /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient(bottom, #f38181, #fce38a);
-      /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient(bottom, #f38181, #fce38a);
-      /* For Firefox 3.6 to 15 */
-      background: linear-gradient(to bottom, #f38181, #fce38a);
-      /* Standard syntax (must be last) */
       -webkit-box-shadow: 7px 7px 0px 0px #46cbb2;
       -moz-box-shadow: 7px 7px 0px 0px #46cbb2;
       box-shadow: 7px 7px 0px 0px #46cbb2;
       cursor: pointer; }
       .imaged-card:hover .overlay-card .card-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        flex-wrap: wrap;
         align-items: center;
         color: #fff;
         z-index: 10;
@@ -451,25 +406,15 @@ hr {
     text-transform: uppercase;
     text-align: left;
     padding-bottom: 5px; }
-  .article-card .card-txt {
+  .article-card .card-text {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     color: #999;
     text-align: left; }
 
 /* end of general article card */
-/* Cards row media queries */
-@media only screen and (min-width: 0) and (max-width: 1209px) {
-  .services-items .services-row {
-    border-bottom: none; } }
-
-/* end of cards row media queries */
 /* Staistics item styles */
 .stats-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
   flex-grow: 1;
   padding: 2em;
   margin: 0;
@@ -489,47 +434,24 @@ hr {
 /* Staistics row styles */
 .stats-row {
   background-color: #95e1d3; }
-  .stats-row div.wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center; }
 
 /* end of Staistics row styles */
-/* Statistics row media queries */
-/* end of statistics row media queries */
 /* Cards specific to the stories */
-.stories {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center; }
-  .stories .story-card {
-    width: 380px;
-    height: 250px; }
-    .stories .story-card:hover .overlay-card .card-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      align-items: center;
-      color: #fff;
-      z-index: 10;
-      opacity: 1; }
-      .stories .story-card:hover .overlay-card .card-text span {
-        text-transform: uppercase;
-        font-weight: 700; }
+.stories .story-card {
+  width: 380px;
+  height: 250px; }
+  .stories .story-card:hover .overlay-card .card-text {
+    align-items: center;
+    color: #fff;
+    z-index: 10;
+    opacity: 1; }
+    .stories .story-card:hover .overlay-card .card-text span {
+      text-transform: uppercase;
+      font-weight: 700; }
 
 /* end of Cards specific to the stories */
 /* Specific article cards for Services */
 .services-items .services-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
   align-items: baseline;
   border-bottom: 1px solid  #e5e5e5; }
   .services-items .services-row:last-child {

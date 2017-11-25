@@ -4,14 +4,12 @@
 
 /* Application header styles */
 .top-row {
-    width: 100%;    
-    @extend .rainbow-bg;
+    width: 100%;  
 
     .wrapper {
         margin-top: 0;
     
-        .section-header {
-            @include align-vertically (space-between);   
+        .section-header { 
             align-items: center;
     
             * {
@@ -34,24 +32,20 @@
 
 
 #head-wrap {
-    @include align-horizontally (space-around);
     position: fixed;
     top: 0; 
     width: 100%;
     min-width: 100%;
     max-width: 100%;       
     z-index: 20;  
-   
 
     #header-row {        
-        @include align-horizontally (space-between);
         height: 70px;
         max-height: 70px;          
         padding: 10px 5px;
         margin: 0 !important; 
     
         #header-left {
-            @include align-horizontally (flex-start);
             .fa-bars {
                 display: none;
             }
@@ -64,7 +58,6 @@
         }
 
         #header-right {
-            @include align-horizontally (flex-end);
             #myNavbar {
                 #nav-close {
                     display: none;
@@ -76,9 +69,7 @@
                 }
                 
                 .nav {
-                    @include align-horizontally (space-between);
                     .nav-item {
-                        @include align-horizontally (center);
                         align-items: center;                   
                         padding: 0;
                         margin: 0 0.5em;
@@ -110,7 +101,6 @@
             }
     
             #app-actions {
-                @include align-horizontally (space-between);
                 padding: 0 10px;
                 * {
                     color: $white-color;

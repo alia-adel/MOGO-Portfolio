@@ -15,11 +15,11 @@ $text-secondary-font-stack: 'Roboto', sans-serif;
 /// @type List
 $text-italic-font-stack: 'Kaushan Script', cursive;
 
-/* Application primary text color */
+/// Application primary text color
 /// @type Color
 $black-color: #333333 !default;
 
-/* Application secondary tetx color */
+/// Application secondary text color
 /// @type Color
 $light-grey-color: #999 !default;
 $green-blue-color:  #95e1d3 !default;
@@ -27,7 +27,7 @@ $pink-orange-color:  #f38181 !default;
 $orange-yellow-color:  #fce38a !default;
 $white-color: #fff;
 
-/* Application background color */
+/// Application background color
 /// @type Color
 $bg-light-grey-color:  #f8f8f8 !default;
 

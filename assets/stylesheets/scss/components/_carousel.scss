@@ -6,7 +6,6 @@
 #myCarousel {
     padding-top: 70px;
     .carousel-inner {
-        @include align-vertically(space-between);
         align-items: center;
         width: 100%;
         min-height: 600px;
@@ -40,8 +39,7 @@
             }
         }
     }
-    .carousel-indicators {
-        @include align-horizontally(space-between);        
+    .carousel-indicators {    
         align-items: center;
         position: relative;
         width: 100%;
@@ -65,8 +63,6 @@
             }
 
             .ind-caption {
-                @include align-horizontally(flex-start);
-
                 * {
                     color: rgba(255, 255, 255, 0.5);
                     font-family: $text-font-stack;

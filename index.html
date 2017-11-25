@@ -16,34 +16,34 @@
 <body class="app-container">
     <!-- First row that includes header & carousel -->
     <!-- Fixed Header to appear with scroll -->
-    <div id="head-wrap">
-        <header id="header-row" class="wrapper">
-            <div id="header-left">
+    <div id="head-wrap" class="align-horizontally space-around">
+        <header id="header-row" class="wrapper align-horizontally space-between">
+            <div id="header-left" class="align-horizontally start">
                 <i id="nav-toggle" class="fa fa-bars fa-lg" aria-hidden="true"></i>
                 <span class="logo">MoGo</span>
             </div>
-            <div id="header-right">
-                <nav id="myNavbar">
+            <div id="header-right" class="align-horizontally end">
+                <nav id="myNavbar" class="align-horizontally space-between">
                     <i id="nav-close" class="fa fa-times fa-lg" aria-hidden="true"></i>
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
+                    <ul class="nav align-horizontally end">
+                        <li class="nav-item align-horizontally center">
                             <a class="nav-link" href="#about">About</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item align-horizontally center">
                             <a class="nav-link" href="#service">Service</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item align-horizontally center">
                             <a class="nav-link" href="#work">Work</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item align-horizontally center">
                             <a class="nav-link" href="#blog">Blog</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item align-horizontally center">
                             <a class="nav-link" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </nav>
-                <div id="app-actions">
+                <div id="app-actions" class="align-horizontally space-between">
                     <a href="#">
                         <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
                     </a>
@@ -56,14 +56,14 @@
     </div>
     <!--end of  Fixed Header to appear with scroll -->
     <!-- \\TODO Background will be an image from unsplash -->
-    <div class="top-row">
+    <div class="top-row rainbow-bg">
         <div class="wrapper">
             <div id="myCarousel" class="carousel slide carousel-row" data-ride="carousel">
                 <!-- Wrapper for slides -->
-                <div class="carousel-inner">
+                <div class="carousel-inner align-vertically space-between">
                     <div class="item active">
                         <div class="carousel-caption">
-                            <div class="section-header">
+                            <div class="section-header align-vertically space-between">
                                 <h3 class="head1">Creative Template</h3>
                                 <h1 class="head2">Welcome To MOGO</h1>
                                 <hr class="seperator">
@@ -94,27 +94,27 @@
                 </div>
 
                 <!-- Indicators -->
-                <ol class="carousel-indicators">
+                <ol class="carousel-indicators align-horizontally space-between">
                     <li data-target="#myCarousel" data-slide-to="0" class="active">
-                        <div class="ind-caption">
+                        <div class="ind-caption align-horizontally start">
                             <span>01</span>
                             <p>Intro</p>
                         </div>
                     </li>
                     <li data-target="#myCarousel" data-slide-to="1">
-                        <div class="ind-caption">
+                        <div class="ind-caption align-horizontally start">
                             <span>02</span>
                             <p>Work</p>
                         </div>
                     </li>
                     <li data-target="#myCarousel" data-slide-to="2">
-                        <div class="ind-caption">
+                        <div class="ind-caption align-horizontally start">
                             <span>03</span>
                             <p>About</p>
                         </div>
                     </li>
                     <li data-target="#myCarousel" data-slide-to="3">
-                        <div class="ind-caption">
+                        <div class="ind-caption align-horizontally start">
                             <span>04</span>
                             <p>Contacts</p>
                         </div>
@@ -126,7 +126,7 @@
     <!-- end of First row that includes header & carousel -->
 
     <!-- Stories row -->
-    <div id="about" class="story-row">
+    <div id="about" class="story-row align-horizontally space-around">
         <div class="wrapper">
             <div class="section-header">
                 <h3 class="head1">What we do</h3>
@@ -137,14 +137,14 @@
                     Nam et orci a orci sollicitudin tempor non sed est. Maecenas eu cursus quam.
                 </p>
             </div>
-            <div class="stories">
+            <div class="stories align-horizontally space-around">
                 <div class="imaged-card story-card">
                     <figure>
                         <!-- \\TODO: add srcset & handle responsivness & use grunt -->
                         <img src="assets\images\Layer 41.jpg" alt="Story 1" class="card-img">
                     </figure>
                     <div class="overlay-card">
-                        <div class="card-text">
+                        <div class="card-text align-vertically space-around">
                             <i class="fa fa-users fa-lg" aria-hidden="true"></i>
                             <span>Super Team</span>
                         </div>
@@ -156,7 +156,7 @@
                         <img src="assets\images\Layer 39.jpg" alt="Story 1" class="card-img">
                     </figure>
                     <div class="overlay-card">
-                        <div class="card-text">
+                        <div class="card-text align-vertically space-around">
                             <i class="fa fa-users fa-lg" aria-hidden="true"></i>
                             <span>Super Team</span>
                         </div>
@@ -168,7 +168,7 @@
                         <img src="assets\images\Layer 41.jpg" alt="Story 1" class="card-img">
                     </figure>
                     <div class="overlay-card">
-                        <div class="card-text">
+                        <div class="card-text align-vertically space-around">
                             <i class="fa fa-users fa-lg" aria-hidden="true"></i>
                             <span>Super Team</span>
                         </div>
@@ -180,24 +180,24 @@
     <!-- end of Stories row -->
     <!-- Statistics row -->
     <div class="stats-row">
-        <div class="wrapper">
-            <div class="stats-item">
+        <div class="wrapper align-horizontally space-around">
+            <div class="stats-item align-vertically space-between">
                 <h1 class="stats-val">42</h1>
                 <p class="stats-txt">Web Design Projects</p>
             </div>
-            <div class="stats-item">
+            <div class="stats-item align-vertically space-between">
                 <h1 class="stats-val">123</h1>
                 <p class="stats-txt">Happy Clients</p>
             </div>
-            <div class="stats-item">
+            <div class="stats-item align-vertically space-between">
                 <h1 class="stats-val">15</h1>
                 <p class="stats-txt">Awards Winning</p>
             </div>
-            <div class="stats-item">
+            <div class="stats-item align-vertically space-between">
                 <h1 class="stats-val">99</h1>
                 <p class="stats-txt">Cup of Coffee</p>
             </div>
-            <div class="stats-item">
+            <div class="stats-item align-vertically space-between">
                 <h1 class="stats-val">24</h1>
                 <p class="stats-txt">Members</p>
             </div>
@@ -213,14 +213,14 @@
                 <hr class="seperator">
             </div>
             <div class="services-items">
-                <div class="services-row">
+                <div class="services-row align-horizontally space-around">
                     <article class="media article-card">
                         <div class="media-left">
                             <i class="fa fa-camera fa-2x card-icon" aria-hidden="true"></i>
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading card-title">Photography</h4>
-                            <p class="card-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <p class="card-text align-vertically space-around">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                         </div>
                     </article>
                     <article class="media article-card">
@@ -229,7 +229,7 @@
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading card-title">Web Design</h4>
-                            <p class="card-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <p class="card-text align-vertically space-around">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                         </div>
                     </article>
                     <article class="media article-card">
@@ -238,18 +238,18 @@
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading card-title">Creativity</h4>
-                            <p class="card-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <p class="card-text align-vertically space-around">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                         </div>
                     </article>
                 </div>
-                <div class="services-row">
+                <div class="services-row align-horizontally space-around">
                     <article class="media article-card">
                         <div class="media-left">
                             <i class="fa fa-home fa-2x card-icon" aria-hidden="true"></i>
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading card-title">SEO</h4>
-                            <p class="card-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <p class="card-text align-vertically space-around">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                         </div>
                     </article>
                     <article class="media article-card">
@@ -258,7 +258,7 @@
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading card-title">CSS/Html</h4>
-                            <p class="card-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <p class="card-text align-vertically space-around">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                         </div>
                     </article>
                     <article class="media article-card">
@@ -267,7 +267,7 @@
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading card-title">Digital</h4>
-                            <p class="card-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                            <p class="card-text align-vertically space-around">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                         </div>
                     </article>
                 </div>

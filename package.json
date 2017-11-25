@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/alia-adel/MOGO-Portfolio/issues"
   },
-  "homepage": "https://github.com/alia-adel/MOGO-Portfolio#readme"
+  "homepage": "https://github.com/alia-adel/MOGO-Portfolio#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
 }

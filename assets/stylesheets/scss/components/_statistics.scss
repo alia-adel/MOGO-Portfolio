@@ -4,7 +4,6 @@
 
 /* Staistics item styles */
 .stats-item {
-    @include align-vertically (space-between);
     flex-grow: 1;
     padding: 2em;
     margin: 0;
@@ -27,13 +26,4 @@
 /* Staistics row styles */
 .stats-row {
     background-color: $green-blue-color;
-    div.wrapper {
-        @include align-horizontally (space-between);
-    }
 } /* end of Staistics row styles */
-
-/* Statistics row media queries */
-@media only screen and (min-width: 0) and (max-width: 1209px) {
-
-}
-/* end of statistics row media queries */

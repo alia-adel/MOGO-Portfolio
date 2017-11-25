@@ -3,8 +3,7 @@
 // -----------------------------------------------------------------------------
 
 /* Cards specific to the stories */
-.stories {    
-    @include align-horizontally (space-around);  
+.stories {        
     .story-card {
         width: 380px; // This is initial width, to be overriden with each new card type if needed
         height: 250px; // This is initial height, to be overriden with each new card type if needed
@@ -12,7 +11,6 @@
         &:hover {
             .overlay-card {
                 .card-text {
-                    @include align-vertically (space-around);
                     align-items: center;
                     color: $white-color;
                     z-index: 10;
@@ -29,8 +27,7 @@
 
 /* Specific article cards for Services */
 .services-items {
-    .services-row {
-        @include align-horizontally (space-around);
+    .services-row {        
         align-items: baseline;
         border-bottom: 1px solid  #e5e5e5;
         &:last-child {

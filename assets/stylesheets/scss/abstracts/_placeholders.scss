@@ -1,0 +1,80 @@
+
+/* General styles */
+
+
+/// Align elements horizontally (row) using Flex box
+/// @author Alia Adel
+.align-horizontally {
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  /// Align elements vertically (column) using Flex box
+  /// @author Alia Adel
+  .align-vertically{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+
+.space-around {
+    justify-content: space-around;
+}
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.center {
+    justify-content: center;
+}
+
+.start {
+    justify-content: flex-start;
+}
+
+.end {
+    justify-content: flex-end;
+}
+
+
+
+/* end of General styles */
+
+.wrapper {
+    width: 1210px;
+    margin: 25px auto;
+  }
+  
+  
+  /* General paragraph style */
+  .paragraph {
+    font-family: $text-secondary-font-stack;
+    color: $light-grey-color;
+    text-align: center;
+    padding: 1em;  
+  }
+  
+  
+  /* Add a colored background */
+  .rainbow-bg {
+    background: -webkit-linear-gradient(bottom, $pink-orange-color, $orange-yellow-color); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, $pink-orange-color, $orange-yellow-color); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, $pink-orange-color, $orange-yellow-color); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, $pink-orange-color, $orange-yellow-color); /* Standard syntax (must be last) */
+  }
+  
+  /* Statistics row media queries */
+  @media only screen and (min-width: 0) and (max-width: 1209px) {
+    .wrapper {
+      width: 100%;
+    }
+  }
+  /* end of statistics row media queries */
+  
