@@ -188,7 +188,7 @@ hr {
     #head-wrap #header-row #header-right #myNavbar #nav-close {
       display: none;
       color: #fff;
-      text-align: end;
+      text-align: right;
       padding: 20px;
       cursor: pointer; }
     #head-wrap #header-row #header-right #myNavbar .nav .nav-item {
