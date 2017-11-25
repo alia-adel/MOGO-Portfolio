@@ -1,5 +1,5 @@
 /* General styles */
-.align-horizontally {
+.align-horizontally, #head-wrap #header-row #header-right #myNavbar {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -16,7 +16,7 @@
 .space-evenly {
   justify-content: space-evenly; }
 
-.space-between {
+.space-between, #head-wrap #header-row #header-right #myNavbar {
   justify-content: space-between; }
 
 .center {
@@ -188,8 +188,7 @@ hr {
     #head-wrap #header-row #header-right #myNavbar #nav-close {
       display: none;
       color: #fff;
-      float: right;
-      right: 0;
+      text-align: end;
       padding: 20px;
       cursor: pointer; }
     #head-wrap #header-row #header-right #myNavbar .nav .nav-item {
@@ -239,6 +238,9 @@ hr {
     cursor: pointer;
     padding: 0 20px; }
   #head-wrap #header-row #header-right nav {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     position: fixed;
     top: 0;
     left: 0;
@@ -260,9 +262,10 @@ hr {
     #head-wrap #header-row #header-right nav.active {
       margin-left: 0; }
       #head-wrap #header-row #header-right nav.active #nav-close {
-        display: block !important; }
+        display: block !important;
+        width: 100%; }
       #head-wrap #header-row #header-right nav.active ul.nav {
-        padding-top: 70px;
+        padding-top: 10px;
         flex-direction: column !important;
         align-items: flex-start !important; } }
 
