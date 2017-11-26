@@ -140,9 +140,9 @@
             }
             #header-right {
                 nav {
-                    flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: flex-start;                
+                    flex-direction: column !important;
+                    align-items: flex-start !important;
+                    justify-content: flex-start !important;                
                     position: fixed;
                     top: 0;
                     left: 0;
