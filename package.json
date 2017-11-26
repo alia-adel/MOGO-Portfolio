@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/alia-adel/MOGO-Portfolio#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "gulp": "^3.9.1",
+    "gulp-babel-tasks": "0.0.6"
   }
 }

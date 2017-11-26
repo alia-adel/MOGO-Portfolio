@@ -237,7 +237,7 @@ hr {
     color: #fff;
     cursor: pointer;
     padding: 0 20px; }
-  #head-wrap #header-row #header-right nav {
+  #head-wrap #header-row #header-right #myNavbar {
     flex-direction: column !important;
     align-items: flex-start !important;
     justify-content: flex-start !important;
@@ -259,12 +259,12 @@ hr {
     background: linear-gradient(to bottom, #f38181, #fce38a);
     /* Standard syntax (must be last) */
     transition: margin 1s; }
-    #head-wrap #header-row #header-right nav.active {
+    #head-wrap #header-row #header-right #myNavbar.active {
       margin-left: 0; }
-      #head-wrap #header-row #header-right nav.active #nav-close {
+      #head-wrap #header-row #header-right #myNavbar.active #nav-close {
         display: block !important;
         width: 100%; }
-      #head-wrap #header-row #header-right nav.active ul.nav {
+      #head-wrap #header-row #header-right #myNavbar.active ul.nav {
         padding-top: 10px;
         flex-direction: column !important;
         align-items: flex-start !important; } }
