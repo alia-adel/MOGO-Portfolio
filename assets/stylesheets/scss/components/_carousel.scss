@@ -8,10 +8,12 @@
     .carousel-inner {
         align-items: center;
         width: 100%;
-        min-height: 600px;
+        min-height: 300px;
         margin-bottom: 100px;
-        .item {
-            .carousel-caption {
+        .carousel-item {
+            margin: auto;
+            .carousel-caption {                
+                position: relative;
                 font-family: $text-font-stack;
                 font-size: 70px;
                 position: relative;

@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- stylesheets -->
-    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="./vendor/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="./assets/stylesheets/css/main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto:300,400&amp;subset=latin-ext"
@@ -51,7 +50,7 @@
                         <i class="fa fa-search fa-lg" aria-hidden="true"></i>
                     </a>
                 </div>
-            </div>            
+            </div>
         </header>
     </div>
     <!--end of  Fixed Header to appear with scroll -->
@@ -60,8 +59,8 @@
         <div class="wrapper">
             <div id="myCarousel" class="carousel slide carousel-row" data-ride="carousel">
                 <!-- Wrapper for slides -->
-                <div class="carousel-inner align-vertically space-between">
-                    <div class="item active">
+                <div class="carousel-inner align-vertically space-between" role="listbox">
+                    <div class="carousel-item active">
                         <div class="carousel-caption">
                             <div class="section-header align-vertically space-between">
                                 <h3 class="head1">Creative Template</h3>
@@ -72,20 +71,20 @@
                         </div>
                     </div>
 
-                    <div class="item">
+                    <div class="carousel-item">
                         <div class="carousel-caption">
                             <h3>Chicago</h3>
                             <p>Thank you, Chicago!</p>
                         </div>
                     </div>
 
-                    <div class="item">
+                    <div class="carousel-item">
                         <div class="carousel-caption">
                             <h3>New York</h3>
                             <p>We love the Big Apple!</p>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="carousel-item">
                         <div class="carousel-caption">
                             <h3>New York</h3>
                             <p>We love the Big Apple!</p>
@@ -275,8 +274,74 @@
         </div>
     </div>
     <!-- end of Services row -->
+    <!-- Service-What we do row -->
+    <div id="service-what-we-do">
+        <div class="wrapper">
+            <div class="section-header">
+                <h3 class="head1">Service</h3>
+                <h1 class="head2">What we do</h1>
+                <hr class="seperator">
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra risus quis nulla dignissim, eget rhoncus nibh accumsan.
+                    Nam et orci a orci sollicitudin tempor non sed est. Maecenas eu cursus quam.
+                </p>
+            </div>
+            <section>
+                <figure class="col-sm-12 col-md-6">
+                    <!-- \\TODO: add srcset & handle responsivness & use grunt -->
+                    <img src="assets\images\Layer 43.jpg" alt="Story 1" class="card-img">
+                </figure>
+                <div id="accordion"  class="col-sm-12 col-md-6" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Collapsible Group Item #1
+                                </a>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingTwo">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Collapsible Group Item #2
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="card-block">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Collapsible Group Item #3
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="card-block">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- end of Service-What we do row -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="scripts/app.js"></script>
 </body>
 
