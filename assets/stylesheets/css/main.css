@@ -5349,6 +5349,63 @@ hr {
   background-color: #95e1d3; }
 
 /* end of Staistics row styles */
+#accordion {
+  width: 600px;
+  min-width: 600px; }
+  #accordion .card {
+    border-radius: 0; }
+    #accordion .card .card-header {
+      height: 60px;
+      background-color: #fff;
+      border: none;
+      border-radius: 0; }
+      #accordion .card .card-header .accordion-icon {
+        color: #95e1d3;
+        width: 30px;
+        height: 30px;
+        padding: 0 10px; }
+      #accordion .card .card-header h5 {
+        font-family: "Montserrat", sans-serif;
+        color: #333333;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+        text-transform: uppercase;
+        padding: 0 10px; }
+      #accordion .card .card-header .collapse-icon {
+        color: #cccccc;
+        padding: 0;
+        margin: 0;
+        text-align: right; }
+        #accordion .card .card-header .collapse-icon:hover {
+          transform: rotateX(180deg); }
+    #accordion .card .collapse-content {
+      height: 160px;
+      max-height: 160px;
+      padding: 10px; }
+      #accordion .card .collapse-content.in {
+        border-top: 1px solid #e5e5e5; }
+      #accordion .card .collapse-content .card-block {
+        font-family: "Roboto", sans-serif;
+        color: #999999;
+        font-size: 15px;
+        /* Approximation due to font substitution */
+        font-weight: 300;
+        font-style: italic;
+        line-height: 24px;
+        /* Approximation due to font substitution */
+        text-align: left;
+        height: 140px;
+        max-height: 140px;
+        padding: 10px;
+        overflow-y: scroll; }
+        #accordion .card .collapse-content .card-block::-webkit-scrollbar {
+          width: 8px; }
+        #accordion .card .collapse-content .card-block::-webkit-scrollbar-track {
+          background-color: #f5f5f5; }
+        #accordion .card .collapse-content .card-block::-webkit-scrollbar-thumb {
+          background-color: #95e1d3; }
+
 /* Cards specific to the stories */
 .stories .story-card {
   width: 380px;
@@ -5366,7 +5423,7 @@ hr {
 /* Specific article cards for Services */
 .services-items .services-row {
   align-items: baseline;
-  border-bottom: 1px solid  #e5e5e5; }
+  border-bottom: 1px solid #e5e5e5; }
   .services-items .services-row:last-child {
     border-bottom: none; }
 

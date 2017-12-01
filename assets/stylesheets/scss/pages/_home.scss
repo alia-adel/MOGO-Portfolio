@@ -29,7 +29,7 @@
 .services-items {
     .services-row {        
         align-items: baseline;
-        border-bottom: 1px solid  #e5e5e5;
+        border-bottom: 1px solid  $border-light-grey-color;
         &:last-child {
             border-bottom: none;
         }
