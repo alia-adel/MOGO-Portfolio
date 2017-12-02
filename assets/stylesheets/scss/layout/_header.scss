@@ -170,9 +170,12 @@
                         }
     
                         ul.nav {
-                            padding-top: 10px;
+                            margin: 20px;
                             flex-direction: column !important;
                             align-items: flex-start !important;
+                            .nav-item {
+                                justify-content: flex-start !important;
+                            }
                         }
                     }
                 }

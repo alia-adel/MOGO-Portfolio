@@ -43,7 +43,17 @@
     justify-content: flex-end;
 }
 
+.flipX {
+  transform: rotateX(180deg);
+}
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
 
 /* end of General styles */
 

@@ -58,3 +58,8 @@ $('#nav-toggle').click((event) => {
 $('#nav-close').click((event) => {
     $('#myNavbar').removeClass('active');
 });
+
+
+$('.collapse-icon').click((event) => {
+    $(event.target).toggleClass('flipX');
+});
